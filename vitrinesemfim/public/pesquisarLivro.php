@@ -3,10 +3,8 @@
    
    if (isset($_GET['valor'])) {
     $valor = $_GET['valor']; 
-} 
-else {$valor='';}
+} else {$valor='';}
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,8 +13,8 @@ else {$valor='';}
     <title>Document</title>
 </head>
 <body>
-    <form action="pesquisarVendedor.php" method="post">
-        Nome do Vendedor: <br>
+    <form action="pesquisarLivro.php" method="post">
+        Nome do Livro: <br>
         <input type="text" name="valor" value="<?php echo $valor; ?>"> <br> <br>
 
         <input  type="submit" value="Pesquisar">
@@ -38,33 +36,23 @@ else {$valor='';}
                 echo "<tr>";
                 echo "<td>ID</td>";
                 echo "<td>Nome</td>";
-                echo "<td>telefone</td>";
-                echo "<td>data nascimento</td>";
-                echo "<td>endereco</td>";
-                echo "<td>email</td>";
-
+                echo "<td>Genero</td>";
+                echo "<td>ISBN</td>";
+                echo "<td>Estado</td>";
 
                 while ($linha = mysqli_fetch_array($resultados)) {
-                    $id = $linha ['idvendedor'];
+                    $id = $linha ['idlivro'];
                     $nome =$linha ['nome'];
-                    $cpf = $linha ['cpf'];
-                    $telefone = $linha ['telefone'];
-                    $data = $linha ['data_nascimento'];
-                    $endereco = $linha ['endereco'];
-                    $email = $linha ['email'];
-
+                    $genero = $linha ['genero'];
+                    $isbn = $linha ['isbn'];
+                    $estado = $linha ['estado'];
 
                     echo "<tr>";
                     echo "<td>$id</td>";
                     echo "<td>$nome</td>";
-                    echo "<td>$cpf</td>";
-                    echo "<td>$data/td>";
-                    echo "<td>$telefone/td>";
-                    echo "<td>$data/td>";
-                    echo "<td>$endereco/td>";
-                    echo "<td>$email/td>";
-
-
+                    echo "<td>$genero</td>";
+                    echo "<td>$isbn/td>";
+                    echo "<td>$estado/td>";
 
 
                 }
