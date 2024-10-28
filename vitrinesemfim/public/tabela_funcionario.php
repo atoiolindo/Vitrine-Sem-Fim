@@ -1,3 +1,34 @@
+<?php 
+if (isset($_GET['id'])) {
+    // echo "editar";
+    require_once "../controle/conexao.php";
+
+    $id = $_GET['id'];
+    $sql = "SELECT * FROM vendedor WHERE idvendendor = $id";
+    $resultado = mysqli_query($conexao, $sql);
+
+    $linha = mysqli_fetch_array($resultado);
+
+    $nome = $linha['nome'];
+    $cpf = $linha['cpf'];
+    $telefone = $linha['telefone'];
+    $data_nascimento = $linha['data_nascimento'];
+    $endereco= $linha['endereco'];
+    $email= $linha['email'];
+} 
+else {
+    // echo "cadastrar";
+    $id = 0;
+    $nome = '';
+    $cpf = '';
+    $telefone = '';
+    $data_nascimento = '';
+    $endereco= '';
+    $email= '';
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

@@ -3,8 +3,10 @@
    
    if (isset($_GET['valor'])) {
     $valor = $_GET['valor']; 
-} else {$valor='';}
+} 
+else {$valor='';}
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
