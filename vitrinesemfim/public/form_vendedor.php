@@ -41,7 +41,7 @@ else {
 </head>
 
 <body class="cadas">
-    <form action="tabela_vendedor.php" method="post">
+    <form action="tabela_vendedor.php?id=<?php echo $id; ?>" method="post">
         <!-- <div class="mb-3"></div> -->
         <h3>Vendedor</h3> <br>
 

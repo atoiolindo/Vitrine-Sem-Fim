@@ -15,6 +15,6 @@
 
     mysqli_query($conexao, $sql);
 
-    header("Location: autor.html")
+    header("Location: autorform.php")
 
     ?>
