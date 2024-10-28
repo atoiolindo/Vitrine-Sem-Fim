@@ -37,7 +37,7 @@ echo "<tr>";
         <?php
 
         if (isset($_GET['valor'])) {
-            require_once "../controle/conexao.php";
+            require_once "../public/conexao.php";
             $sql = "SELECT * FROM autor WHERE nome LIKE '%valor%'";
             $resultados = mysqli_query($conexao, $sql);
 
