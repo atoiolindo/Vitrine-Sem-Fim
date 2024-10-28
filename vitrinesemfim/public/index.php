@@ -17,7 +17,7 @@ if (isset($_SESSION['logado'])) {
 </head>
 
 <body>
-    <form action="../controle/verificarLogin.php" method="post">
+    <form action="../controle/verificarlogin.php" method="post">
 
 
         <div id="borda_cima" class="container" >
