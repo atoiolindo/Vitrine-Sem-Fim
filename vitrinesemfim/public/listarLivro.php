@@ -1,3 +1,6 @@
+<?php 
+require_once "../controle/verificarlogado.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 

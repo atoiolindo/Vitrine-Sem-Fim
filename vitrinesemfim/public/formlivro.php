@@ -1,3 +1,33 @@
+<?php
+require_once "../controle/conexao.php";
+
+if (isset($GET['id'])) {
+    require_once "../controle/conexao.php";
+
+    $id = $GET['id'];
+    $sql = "SELECT * FROM paciente WHERE idpaciente = $id";
+    $resultado = mysqli_query( $conexao, $sql);
+
+    $linha = mysqli_fetch_array($resultado);
+
+    $nome = $linha['nome'];
+    $cpf = $linha['cpf'];
+    $telefone = $linha['telefone'];
+
+    $botao = "Salvar";
+} else {
+    //echo cadastrar
+    $id = 0;
+    $nome = '';
+    $cpf = '';
+    $telefone = '';
+
+    $botao = "Cadastrar";
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +41,7 @@
 
 <body class="cadas">
     <h3>Livro</h3> <br>
-    <form action="livro2.php">
+    <form action="livro2.php?id=<?php echo $id; ?>" method="post">
         
             <div class="container">
                 <div>
