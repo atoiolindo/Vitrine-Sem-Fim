@@ -50,6 +50,8 @@
             echo "<td>$data_nascimento</td>";
             echo "<td>$endereco</td>";
             echo "<td>$email</td>";
+            echo "<td><a href='../controle/deletar_vendedor.php?id=$id' class='btn btn-danger'>Apagar</a></td>";
+            echo "<td><a href='form_vendedor.php?id=$id'>Editar</a></td>";
             echo "</tr>";
             echo "</tbody>";
         }
