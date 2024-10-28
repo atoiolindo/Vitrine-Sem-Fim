@@ -7,7 +7,7 @@ echo "<tr>";
     echo "<td>Endereço</td>";
     echo "<td>E-mail</td>";
     <?php
-    require_once "../controle/verificaLogado.php";
+    require_once "../controle/verificarlogado.php";
 
     if (isset($_GET['valor'])) {
         $valor = $_GET['valor'];
