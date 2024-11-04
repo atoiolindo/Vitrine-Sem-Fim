@@ -42,30 +42,30 @@ if (isset($_GET['id'])) {
 
 <body class="cadas">
     <form action="autor.php" method="get">
-      
+
         <h3>Autor</h3> <br>
         <div class="container">
 
             <div>
                 <label for="nome" class="form-label">Nome</label>
-               <input type="text" name="nome" class="form-control" id="nome">
-           </div>
-    
-           <div>
-               <label for="nacionalidade" class="form-label">Nacionalidade</label>
-               <input type="text" name="nacionalidade" class="form-control" id="nacionalidade">
-           </div>
-         
-           <div>
-               <label for="biografia" class="form-label">Biografia</label>
-               <input type="text" name="biografia" class="form-control" id="biografia">
-           </div>
-          
-           
-           <input type="submit" value="<?php echo $botao; ?>">
+                <input type="text" name="nome" class="form-control" id="nome">
+            </div>
+
+            <div>
+                <label for="nacionalidade" class="form-label">Nacionalidade</label>
+                <input type="text" name="nacionalidade" class="form-control" id="nacionalidade">
+            </div>
+
+            <div>
+                <label for="biografia" class="form-label">Biografia</label>
+                <input type="text" name="biografia" class="form-control" id="biografia">
+            </div>
+
+
+            <input type="submit" value="<?php echo $botao; ?>">
 
         </div>
-    
+
 
     </form>
 </body>
