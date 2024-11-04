@@ -1,4 +1,4 @@
-<?php 
+<?php
 if (isset($_GET['id'])) {
     // echo "editar";
     require_once "../controle/conexao.php";
@@ -13,18 +13,17 @@ if (isset($_GET['id'])) {
     $cpf = $linha['cpf'];
     $telefone = $linha['telefone'];
     $data_nascimento = $linha['data_nascimento'];
-    $endereco= $linha['endereco'];
-    $email= $linha['email'];
-} 
-else {
+    $endereco = $linha['endereco'];
+    $email = $linha['email'];
+} else {
     // echo "cadastrar";
     $id = 0;
     $nome = '';
     $cpf = '';
     $telefone = '';
     $data_nascimento = '';
-    $endereco= '';
-    $email= '';
+    $endereco = '';
+    $email = '';
 }
 
 ?>
@@ -59,12 +58,12 @@ else {
                 <label for="telefone" class="form-label">Telefone</label>
                 <input type="text" name="telefone" class="form-control" id="telefone">
             </div>
-    
+
             <div>
                 <label for="nascimento" class="form-label">Data de nascimento</label>
                 <input type="date" name="nascimento" class="form-control" id="nascimento">
             </div>
-    
+
             <div>
                 <label for="endereço" class="form-label">Endereço</label>
                 <input type="text" name="endereço" class="form-control" id="endereço">
@@ -73,8 +72,8 @@ else {
                 <label for="email" class="form-label">Email</label>
                 <input type="text" name="email" class="form-control" id="email">
             </div>
-    
-            <a href="home.html" type="submit" class="btn btn-secondary mt-3">Cadastrar</a>
+
+            <input type="submit" value="<?php echo $botao; ?>" class="btn btn-secondary mt-3">
         </div>
 
 
