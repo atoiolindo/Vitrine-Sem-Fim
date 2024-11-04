@@ -40,32 +40,33 @@ if (isset($GET['id'])) {
 </head>
 
 <body class="cadas">
-    <h3>Livro</h3> <br>
     <form action="livro2.php?id=<?php echo $id; ?>" method="post">
         
-            <div class="container">
-                <div>
-                    <label for="nome" class="form-label">Nome</label>
-                    <input type="text" name="nome" class="form-control" id="nome">
-                </div>
+        <h3>Livro</h3> <br>
+        <div class="container">
 
-                <div>
-                    <label for="genero" class="form-label">Genero</label>
-                    <input type="text" name="genero" class="form-control" id="genero">
-                </div>
+            <div>
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" name="nome" class="form-control" id="nome">
+            </div>
 
-                <div>
-                    <label for="isbn" class="form-label">ISBN</label>
-                    <input type="text" name="isbn" class="form-control" id="isbn">
-                </div>
+            <div>
+                <label for="genero" class="form-label">Genero</label>
+                <input type="text" name="genero" class="form-control" id="genero">
+            </div>
 
-                <div>
-                    <label for="estado" class="form-label">Estado</label>
-                    <input type="text" name="estado" class="form-control" id="estado">
-                </div>
+            <div>
+                <label for="isbn" class="form-label">ISBN</label>
+                <input type="text" name="isbn" class="form-control" id="isbn">
+            </div>
 
-                <div>
-                    <label for="idautor" class="form-label">AUTOR</label>
+            <div>
+                <label for="estado" class="form-label">Estado</label>
+                <input type="text" name="estado" class="form-control" id="estado">
+            </div>
+
+            <div>
+                <label for="idautor" class="form-label">AUTOR</label>
                     <select name="idautor">
                         <?php
                         require_once "../controle/conexao.php";
