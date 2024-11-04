@@ -94,8 +94,7 @@ if (isset($GET['id'])) {
                     </select>
                 </div>
 
-                <a href="home.html" type="submit" class="btn btn-secondary mt-3">Cadastrar</a>
-
+                <input type="submit" value="<?php echo $botao; ?>" class="btn btn-secondary mt-3">
             </div>
 
     </form>
