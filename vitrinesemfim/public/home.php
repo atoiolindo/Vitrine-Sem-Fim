@@ -1,5 +1,5 @@
 <?php
-require_once "../controle/verificarlogado.php";
+require_once "../controle/verificaLogado.php";
 ?>
 
 <!DOCTYPE html>
