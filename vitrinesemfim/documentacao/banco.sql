@@ -294,4 +294,4 @@ INSERT INTO pagamento (atraso, multa, valor_final, vendedor_idvendedor, empresti
 INSERT INTO pagamento (atraso, multa, valor_final, vendedor_idvendedor, emprestimo_idemprestimo, valor_pago) VALUES ('2', '1', '8', '18', '18', '8');
 INSERT INTO pagamento (atraso, multa, valor_final, vendedor_idvendedor, emprestimo_idemprestimo, valor_pago) VALUES ('4', '1', '10', '19', '19', '10');
 INSERT INTO pagamento (atraso, multa, valor_final, vendedor_idvendedor, emprestimo_idemprestimo, valor_pago) VALUES ('5', '1', '11', '20', '20', '11');
-INSERT INTO usuario (email, senha) VALUES ('antonio1@gmail.com', '123321');
+INSERT INTO usuario (email, senha) VALUES ('antonio1@gmail.com', '$2y$10$m.G6NMZn4oe0Y/WWYb1WauXYY0COo14gHENeYkCM4OvpqAekPkPlC');
