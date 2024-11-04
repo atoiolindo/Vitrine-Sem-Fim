@@ -1,11 +1,11 @@
+
 <?php
-require_once "../controle/conexao.php";
+require_once "./conexao.php";
 
 $login = $_POST['login'];
 $senha = $_POST['senha'];
 
-$sql = "SELECT * FROM usuario WHERE email = '$login' AND senha = '$senha'";
-
+$sql = "SELECT * FROM usuario WHERE email = '$login'";
 $resultados = mysqli_query($conexao, $sql);
 
 if (mysqli_num_rows($resultados) == 0) {
@@ -13,6 +13,17 @@ if (mysqli_num_rows($resultados) == 0) {
     // ou informou dados errados.
     header("Location: ../public/index.php");
 } else {
-    // pode acessar.
-    header("Location: ../public/home.php");
+    $linha = mysqli_fetch_array($resultados);
+    $senhaBanco = $linha['senha'];
+
+    if (password_verify($senha, $senhaBanco)) {
+        // pode acessar.
+        session_start();
+        $_SESSION['logado'] = 1;
+        $_SESSION['idusuario'] = $linha['idusuario'];
+        header("Location: ../public/home.php");
+    } else {
+        header("Location: ../public/index.php");
+    }
 }
+?>
