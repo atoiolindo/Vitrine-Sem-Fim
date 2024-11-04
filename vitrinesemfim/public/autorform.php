@@ -1,3 +1,34 @@
+<?php
+require_once "../controle/verificaLogado.php";
+
+if (isset($_GET['id'])) {
+    // echo "editar";
+    require_once "../controle/conexao.php";
+
+    $id = $_GET['id'];
+    $sql = "SELECT * FROM autor WHERE idautor = $id";
+    $resultado = mysqli_query($conexao, $sql);
+
+    $linha = mysqli_fetch_array($resultado);
+
+    $nome = $linha['nome'];
+    $nacionalidade = $linha['nacionalidade'];
+    $biografia = $linha['biografia'];
+
+    // $acao = "editar";
+    $botao = "Salvar";
+} else {
+    // echo "cadastrar";
+    $id = 0;
+    $nome = '';
+    $nacionalidade = '';
+    $biografia = '';
+
+    // $acao = "cadastrar";
+    $botao = "Cadastrar";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,7 +62,7 @@
            </div>
           
            
-           <a href="home.html" type="submit" class="btn btn-secondary mt -3">Cadastrar</a>
+           <input type="submit" value="<?php echo $botao; ?>">
 
         </div>
     
