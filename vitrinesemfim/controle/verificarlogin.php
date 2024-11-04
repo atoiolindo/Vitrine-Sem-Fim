@@ -11,18 +11,12 @@ if (mysqli_num_rows($resultados) == 0) {
     // usuário não cadastrado
     // ou informou dados errados.
     header("Location: ../public/index.php");
+    // echo "sem resultados";
 } else {
-    $linha = mysqli_fetch_array($resultados);
-    $senhaBanco = $linha['senha'];
-
-    if (password_verify($senha, $senhaBanco)) {
-        // pode acessar.
-        session_start();
-        $_SESSION['logado'] = 1;
-        $_SESSION['idusuario'] = $linha['idusuario'];
-        header("Location: ../public/home.php");
-    } else {
-        header("Location: ../public/index.php");
-    }
+    // pode acessar.
+    session_start();
+    $_SESSION['logado'] = 1;
+    header("Location: ../public/home.php");
+    // echo "com resultados";
 }
 ?>
