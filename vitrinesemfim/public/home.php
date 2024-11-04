@@ -9,7 +9,7 @@ require_once "../controle/verificarlogado.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/bootstrap.css"> <!-- Link para o CSS do Bootstrap -->
-    <link rel = "stylesheet" href="./css/estilo.css"> 
+    <link rel="stylesheet" href="./css/estilo.css">
 
     <title>Vitrine sem fim</title>
 </head>
@@ -29,12 +29,20 @@ require_once "../controle/verificarlogado.php";
         <br><br>
         <fieldset>
             <legend>Listagem</legend>
-            <a href="listarAutor.php" class="btn btn-secondary" >Listar Autores</a>
-            <a href="listarVendedor.php" class="btn btn-secondary" >Listar Vendedores</a>
-            <a href="listarCliente.php"class="btn btn-secondary" >Listar Clientes</a>
-            <a href="listarPagamento.php" class="btn btn-secondary" >Listar Pagamentos</a>
-            <a href="listarLivro.php" class="btn btn-secondary" >Listar Livros</a>
-            <a href="listarEmprestimo.php" class="btn btn-secondary" >Listar Emprestimos</a>
+            <a href="listarAutor.php" class="btn btn-secondary">Listar Autores</a>
+            <a href="listarVendedor.php" class="btn btn-secondary">Listar Vendedores</a>
+            <a href="listarCliente.php" class="btn btn-secondary">Listar Clientes</a>
+            <a href="listarPagamento.php" class="btn btn-secondary">Listar Pagamentos</a>
+            <a href="listarLivro.php" class="btn btn-secondary">Listar Livros</a>
+            <a href="listarEmprestimo.php" class="btn btn-secondary">Listar Emprestimos</a>
+        </fieldset>
+        <br><br>
+        <fieldset>
+            <legend>Pesquisar</legend>
+            <a href="pesquisarAutor.php" class="btn btn-secondary">Pesquisar Autores</a>
+            <a href="pesquisarVendedor.php" class="btn btn-secondary">Pesquisar Vendedores</a>
+            <a href="pesquisarCliente.php" class="btn btn-secondary">Pesquisar Clientes</a>
+            <a href="pesquisarLivro.php" class="btn btn-secondary">Pesquisar Livros</a>
         </fieldset>
     </div>
 </body>
