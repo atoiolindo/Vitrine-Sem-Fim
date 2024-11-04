@@ -85,7 +85,7 @@ if (isset($GET['id'])) {
                             echo "<tr>";
                             echo "<th scope='row'>$i</th>";
                             echo "<td>$nome</td>";
-                            echo "<td>$idautor</td>";
+                            echo "<td>$id</td>";
                             echo "</tr>";
                             echo "</tbody>";
                         }
