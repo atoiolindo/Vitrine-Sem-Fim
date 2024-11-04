@@ -70,16 +70,24 @@ if (isset($GET['id'])) {
                         <?php
                         require_once "../controle/conexao.php";
 
-                        $sqls = "SELECT idautor, nome FROM autor";
+                        $sql = "SELECT idautor, nome FROM autor";
 
-                        $resultados = mysqli_query($conexao, $sqls);
+                        $resultados = mysqli_query($conexao, $sql);
+                        $i = 0;
 
                         while ($linha = mysqli_fetch_array($resultados)) {
+                            $i++;
                             $id = $linha['idautor'];
                             $nome = $linha['nome'];
 
 
-                            echo "<option value='$id'>$nome</option>";
+                            echo "<tbody>";
+                            echo "<tr>";
+                            echo "<th scope='row'>$i</th>";
+                            echo "<td>$nome</td>";
+                            echo "<td>$id</td>";
+                            echo "</tr>";
+                            echo "</tbody>";
                         }
                         ?>
                     </select>
