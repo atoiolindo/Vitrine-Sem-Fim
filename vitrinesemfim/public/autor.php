@@ -1,20 +1,22 @@
 <?php
-    $nome = $_GET['nome'];
-    $nacionalidade = $_GET['nacionalidade'];
-    $biografia = $_GET['biografia'];
+// Se conectar ao banco
+// Qual o servidor? Qual usuario? Qual senha? Qual banco?
+require_once "../controle/conexao.php";
 
-    // echo $nome;
-    // echo '<br>';
-    // echo $nacionalidade;
-    // echo '<br>';
-    // echo $biografia;
+$id = $_GET['id'];
+$nome = $_POST['nome'];
+$nacionalidade = $_POST['nacionalidade'];
+$biografia = $_POST['biografia'];
 
-    require_once "../controle/conexao.php";
-
+if ($id == 0) {
+    // Criar um comando SQL que grava no banco
     $sql = "INSERT INTO autor (nome, nacionalidade, biografia) VALUES ('$nome', '$nacionalidade', '$biografia')";
+} else {
+    $sql = "UPDATE autor SET nome = '$nome', nacionalidade = '$nacionalidade', biografia = '$biografia' WHERE idautor = $id";
+}
 
-    mysqli_query($conexao, $sql);
+// Mandar executar o comando
+mysqli_query($conexao, $sql);
 
-    header("Location: autorform.php")
-
-    ?>
+header("Location: autorform.php")
+?>

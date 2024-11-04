@@ -119,8 +119,8 @@ if (isset($_GET['id'])) {
                 <input type="text" name="pago" class="form-control" id="pago">
             </div>
 
-
-            <a href="home.html" type="submit" class="btn btn-secondary mt-3">Cadastrar</a>
+            <input type="submit" value="<?php echo $botao; ?>" class="btn btn-secondary mt-3">
+            
 
         </div>
 

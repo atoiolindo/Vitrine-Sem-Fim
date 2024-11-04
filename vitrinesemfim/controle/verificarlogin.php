@@ -1,11 +1,11 @@
+
 <?php
-require_once "../controle/conexao.php";
+require_once "./conexao.php";
 
 $login = $_POST['login'];
 $senha = $_POST['senha'];
 
-$sql = "SELECT * FROM usuario WHERE email = '$login' AND senha = '$senha'";
-
+$sql = "SELECT * FROM usuario WHERE email = '$login'";
 $resultados = mysqli_query($conexao, $sql);
 
 if (mysqli_num_rows($resultados) == 0) {
@@ -20,3 +20,4 @@ if (mysqli_num_rows($resultados) == 0) {
     header("Location: ../public/home.php");
     // echo "com resultados";
 }
+?>
