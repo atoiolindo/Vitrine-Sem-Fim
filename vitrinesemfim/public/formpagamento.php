@@ -80,17 +80,17 @@ if (isset($_GET['id'])) {
                     $resultados = mysqli_query($conexao, $sql);
 
                     while ($linha = mysqli_fetch_array($resultados)) {
-                        $id = $linha['idvendedor'];
+                        $id2 = $linha['idvendedor'];
                         $nome = $linha['nome'];
 
-                        if ($id == $idpaciente) {
+                        if ($id2 == $idvendedor) {
                             $selecionado = 'selected';
                         } else {
                             $selecionado = '';
                         }
 
 
-                        echo "<option value='$id' $selecionado>$nome</option>";
+                        echo "<option value='$id2' $selecionado>$nome</option>";
                     }
                     ?>
                 </select>
@@ -109,14 +109,14 @@ if (isset($_GET['id'])) {
                     $resultados = mysqli_query($conexao, $sql);
 
                     while ($linha = mysqli_fetch_array($resultados)) {
-                        $id = $linha['idemprestimo'];
+                        $id3 = $linha['idemprestimo'];
 
-                        if ($id == $idemprestimo) {
+                        if ($id3 == $idemprestimo) {
                             $selecionado = 'selected';
                         } else {
                             $selecionado = '';
                         }
-                        echo "<option value='$id' $selecionado>$id</option>";
+                        echo "<option value='$id3' $selecionado>$id</option>";
                     }
                     ?>
                 </select>

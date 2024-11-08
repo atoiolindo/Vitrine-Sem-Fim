@@ -32,7 +32,7 @@ require_once "../controle/verificaLogado.php";
         require_once "../controle/conexao.php";
 
         $sql = "SELECT * FROM pagamento";
-        $i = 0;
+        $id = 0;
         $resultados = mysqli_query($conexao, $sql);
         while ($linha = mysqli_fetch_array($resultados)) {
             $id = $linha['idpagamento'];;
@@ -45,7 +45,7 @@ require_once "../controle/verificaLogado.php";
 
             echo "<tbody>";
             echo "<tr>";
-            echo "<th scope='row'>$i</th>";
+            echo "<th scope='row'>$id</th>";
             echo "<td>$atraso</td>";
             echo "<td>$multa</td>";
             echo "<td>$final</td>";
