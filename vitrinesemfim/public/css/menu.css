@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap');
+
+
+.btnexpandir {
+    text-align: left;
+    margin-left: 1%;
+    margin-top: 2%;
+    font-size: larger;
+}
+
+#menu {
+    text-align: center
+}
