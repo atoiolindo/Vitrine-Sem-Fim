@@ -14,7 +14,7 @@ require_once "../controle/verificaLogado.php";
 </head>
 
 <body class="listar">
-    <h2>Lista de Pagamentos</h2>
+    <h2>Livros</h2>
 
     <table class="table table-striped">
         <thead>
