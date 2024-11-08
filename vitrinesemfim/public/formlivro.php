@@ -14,7 +14,7 @@ if (isset($GET['id'])) {
     $cpf = $linha['cpf'];
     $telefone = $linha['telefone'];
 
-    $botao = "Salvar";
+    EDITAR
 } else {
     //echo cadastrar
     $id = 0;
@@ -22,7 +22,7 @@ if (isset($GET['id'])) {
     $cpf = '';
     $telefone = '';
 
-    $botao = "Cadastrar";
+    Cadastrar
 }
 
 ?>
@@ -45,24 +45,25 @@ if (isset($GET['id'])) {
         <h3>Livro</h3> <br>
         <div class="container">
 
+       
             <div>
                 <label for="nome" class="form-label">Nome</label>
-                <input type="text" name="nome" class="form-control" id="nome">
+                <input type="text" name="nome" class="form-control" value="<?php echo $nome; ?>">
             </div>
 
             <div>
                 <label for="genero" class="form-label">Genero</label>
-                <input type="text" name="genero" class="form-control" id="genero">
+                <input type="text" name="genero" class="form-control" value="<?php echo $genero; ?>">
             </div>
 
             <div>
                 <label for="isbn" class="form-label">ISBN</label>
-                <input type="text" name="isbn" class="form-control" id="isbn">
+                <input type="text" name="isbn" class="form-control" value="<?php echo $isbn; ?>">
             </div>
 
             <div>
                 <label for="estado" class="form-label">Estado</label>
-                <input type="text" name="estado" class="form-control" id="estado">
+                <input type="text" name="estado" class="form-control" value="<?php echo $estado; ?>">
             </div>
 
             <div>

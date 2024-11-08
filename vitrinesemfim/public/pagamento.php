@@ -1,19 +1,26 @@
 <?php
-$atraso = $_GET['atraso'];
+require_once "./conexao.php";
 
-$multa = $_GET['multa'];
+$id = $_GET['id'];
 
-$final = $_GET['final'];
+$atraso = $_POST['atraso'];
 
-$idvendedor = $_GET['idvendedor'];
-$idemprestimo = $_GET['idemprestimo'];
+$multa = $_POST['multa'];
 
-$pago = $_GET['pago'];
+$final = $_POST['final'];
+
+$idvendedor = $_POST['idvendedor'];
+$idemprestimo = $_POST['idemprestimo'];
+
+$pago = $_POST['pago'];
 
 require_once "../controle/conexao.php";
 
-$sql = "INSERT INTO pagamento (atraso, multa, valor_final, vendedor_idvendedor, emprestimo_idemprestimo, valor_pago) VALUES ('$atraso', '$multa', '$final', '$idvendedor', '$idemprestimo', '$pago')";
-
+if ($id == 0) {
+    $sql = "INSERT INTO pagamento (atraso, multa, valor_final, vendedor_idvendedor, emprestimo_idemprestimo, valor_pago) VALUES ('$atraso', '$multa', '$final', '$idvendedor', '$idemprestimo', '$pago')";
+} else {
+    $sql = "UPDATE pagamento SET atraso = '$atraso', multa = '$multa', final = '$final WHERE idpagamento = $id";
+}
 mysqli_query($conexao, $sql);
 
-header("Location: formpagamento.php");
+header("Location: ../public/home.php");
