@@ -14,7 +14,7 @@ if (isset($GET['id'])) {
     $cpf = $linha['cpf'];
     $telefone = $linha['telefone'];
 
-    $botao = "Salvar";
+    EDITAR
 } else {
     //echo cadastrar
     $id = 0;
@@ -22,7 +22,7 @@ if (isset($GET['id'])) {
     $cpf = '';
     $telefone = '';
 
-    $botao = "Cadastrar";
+    Cadastrar
 }
 
 ?>
