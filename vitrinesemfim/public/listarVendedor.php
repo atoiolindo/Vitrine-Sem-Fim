@@ -1,3 +1,6 @@
+<?php 
+require_once "../controle/verificaLogado.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -57,7 +60,7 @@
         }
         ?>
     </table>
-    <a href="home.html" class="btn btn-secondary float-start">Voltar para Início</a>
+    <a href="home.php" class="btn btn-secondary float-start">Voltar para Início</a>
 </body>
 
 </html>

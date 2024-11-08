@@ -14,7 +14,7 @@ require_once "../controle/verificaLogado.php";
 </head>
 
 <body class="listar">
-    <h2>Lista de Pagamentos</h2>
+    <h2>Livros</h2>
 
     <table class="table table-striped">
         <thead>
@@ -50,6 +50,7 @@ require_once "../controle/verificaLogado.php";
             echo "<td>$idautor</td>";
             echo "<td>$isbn</td>";
             echo "<td>$estado</td>";
+            echo "<td><a href='..controle/deletarLivro.php?id='>Deletar</a></td>";
             echo "</tr>";
             echo "</tbody>";
         }
