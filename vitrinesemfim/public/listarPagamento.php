@@ -1,4 +1,4 @@
-<?php 
+<?php
 require_once "../controle/verificaLogado.php";
 ?>
 <!DOCTYPE html>
@@ -9,7 +9,7 @@ require_once "../controle/verificaLogado.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/bootstrap.css">
     <title>Document</title>
-    <link rel = "stylesheet" href="./css/estilo.css"> 
+    <link rel="stylesheet" href="./css/estilo.css">
 
 </head>
 
@@ -32,10 +32,10 @@ require_once "../controle/verificaLogado.php";
         require_once "../controle/conexao.php";
 
         $sql = "SELECT * FROM pagamento";
-        $i = 0;
+        $id = 0;
         $resultados = mysqli_query($conexao, $sql);
         while ($linha = mysqli_fetch_array($resultados)) {
-            $i++;
+            $id = $linha['idpagamento'];;
             $atraso = $linha['atraso'];
             $multa = $linha['multa'];
             $final = $linha['valor_final'];
@@ -45,13 +45,14 @@ require_once "../controle/verificaLogado.php";
 
             echo "<tbody>";
             echo "<tr>";
-            echo "<th scope='row'>$i</th>";
+            echo "<th scope='row'>$id</th>";
             echo "<td>$atraso</td>";
             echo "<td>$multa</td>";
             echo "<td>$final</td>";
             echo "<td>$idvendedor</td>";
             echo "<td>$idemprestimo</td>";
             echo "<td>$pago</td>";
+            echo "<td><a href='formpagamento.php?id=$id'>Editar</a></td>";
             echo "</tr>";
             echo "</tbody>";
         }
