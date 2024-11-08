@@ -14,7 +14,7 @@ if (isset($GET['id'])) {
     $cpf = $linha['cpf'];
     $telefone = $linha['telefone'];
 
-    EDITAR
+    $botao = "Salvar";
 } else {
     //echo cadastrar
     $id = 0;
@@ -22,7 +22,7 @@ if (isset($GET['id'])) {
     $cpf = '';
     $telefone = '';
 
-    Cadastrar
+    $botao = "Cadastrar";
 }
 
 ?>
@@ -40,7 +40,7 @@ if (isset($GET['id'])) {
 </head>
 
 <body class="cadas">
-    <form action="livro2.php?id=<?php echo $id; ?>" method="post">
+    <form action="editarLivro.php?id=<?php echo $id; ?>" method="post">
         
         <h3>Livro</h3> <br>
         <div class="container">

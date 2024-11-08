@@ -11,7 +11,7 @@
 </head>
 
 <body class="listar">
-    <h2>Lista de Emprestimos</h2>
+    <h2>Emprestimos</h2>
 
     <table class="table table-striped">
         <thead>
@@ -38,7 +38,7 @@
             
             // SELECT nome FROM cliente WHERE idcliente = 1;
             $clientte = $linha['cliente_idcliente'];
-            $sql2 = "SELECT nome FROM cliente WHERE idcliente = $paciente";
+            $sql2 = "SELECT nome FROM cliente WHERE idcliente = $cliente";
             $resultados2 = mysqli_query($conexao, $sql2);
             $linha2 = mysqli_fetch_array($resultados2);
             $cliente_nome = $linha2['nome'];
@@ -52,8 +52,8 @@
 
             // SELECT nome FROM vendedor WHERE idvendedor = 1;
             $vendedor = $linha['vendedor_idvendedor'];
-            $sql3 = "SELECT nome FROM vendedor WHERE idvendedor = $vendedor";
-            $resultados3 = mysqli_query($conexao, $sql3);
+            $sql4 = "SELECT nome FROM vendedor WHERE idvendedor = $vendedor";
+            $resultados4 = mysqli_query($conexao, $sql3);
             $linha3 = mysqli_fetch_array($resultados3);
             $livro_nome = $linha3['vendedor'];
 
@@ -65,6 +65,7 @@
             echo "<td>$cliente</td>";
             echo "<td>$livro</td>";
             echo "<td>$vendedor</td>";
+            echo "<td><a href='../controle/deletarEmprestimo.php?id=$id' class='btn btn-danger'>Apagar</a></td>";
             echo "</tr>";
             echo "</tbody>";
         }
