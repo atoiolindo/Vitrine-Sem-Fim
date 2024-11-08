@@ -1,4 +1,4 @@
-<?php 
+<?php
 require_once "../controle/verificaLogado.php";
 ?>
 <!DOCTYPE html>
@@ -9,7 +9,7 @@ require_once "../controle/verificaLogado.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/bootstrap.css">
     <title>Document</title>
-    <link rel = "stylesheet" href="./css/estilo.css"> 
+    <link rel="stylesheet" href="./css/estilo.css">
 
 </head>
 
@@ -35,7 +35,7 @@ require_once "../controle/verificaLogado.php";
         $i = 0;
         $resultados = mysqli_query($conexao, $sql);
         while ($linha = mysqli_fetch_array($resultados)) {
-            $i++;
+            $id = $linha['idpagamento'];;
             $atraso = $linha['atraso'];
             $multa = $linha['multa'];
             $final = $linha['valor_final'];
@@ -52,6 +52,7 @@ require_once "../controle/verificaLogado.php";
             echo "<td>$idvendedor</td>";
             echo "<td>$idemprestimo</td>";
             echo "<td>$pago</td>";
+            echo "<td><a href='formpagamento.php?id=$id'>Editar</a></td>";
             echo "</tr>";
             echo "</tbody>";
         }
