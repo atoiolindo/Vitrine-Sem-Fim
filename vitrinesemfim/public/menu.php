@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +11,7 @@
 
 </head>
 <body>
+    <form action="home.php" method="post"></form>
 
     <nav class="menulateral">
 
@@ -19,28 +22,26 @@
         <ul>
             <li class="itemmenu">
                 <a href="#">
-                    <span class= "icon"></span>
-                    <span class= "txtlink"></span>
-
+                    <span class= "icon"> <i class="bi bi-house"> </i> </span>
+                    <span class= "txtlink"> Página Inicial </span>
                 </a>
             </li>
         
             <li class="itemmenu">
                 <a href="#">
-                    <span class= "icon"> <i class="bi bi-house"></i> </span>
-                    <span class= "txtlink"> Página Inicial </span>
+                    <span class= "icon"> <i class="bi bi-journal-text"> </i> </span>
+                    <span class= "txtlink"> Cadastro </span>
                 </a>
             </li>  
             <li class="itemmenu">
                 <a href="#">
-                    <span class= "icon"></span>
-                    <span class= "txtlink"></span>
-                </a>
+                    <span class= "icon"> <i class="bi bi-person-lines-fill"> </i> </span>
+                    <span class= "txtlink"> Listagem </span>
              </li>  
              <li class="itemmenu">
                 <a href="#">
-                    <span class= "icon"></span>
-                    <span class= "txtlink"></span>
+                    <span class= "icon"> <i class="bi bi-search"> </i> </span>
+                    <span class= "txtlink"> Pesquisar </span>
 
                 </a>
             </li>  
