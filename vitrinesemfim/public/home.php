@@ -15,6 +15,10 @@ require_once "../controle/verificaLogado.php";
 </head>
 
 <body>
+    <?php
+    require_once 'menu.php';
+    ?>
+    
     <h2><i><b>Vitrine sem fim</b></i></h2>
     <div class="corpo">
         <fieldset>
