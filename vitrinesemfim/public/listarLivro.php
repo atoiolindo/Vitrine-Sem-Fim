@@ -1,5 +1,5 @@
 <?php 
-require_once "../controle/verificarlogado.php";
+require_once "../controle/verificaLogado.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +14,7 @@ require_once "../controle/verificarlogado.php";
 </head>
 
 <body class="listar">
-    <h2>Lista de Pagamentos</h2>
+    <h2>Livros</h2>
 
     <table class="table table-striped">
         <thead>
@@ -50,12 +50,13 @@ require_once "../controle/verificarlogado.php";
             echo "<td>$idautor</td>";
             echo "<td>$isbn</td>";
             echo "<td>$estado</td>";
+            echo "<td><a href='..controle/deletarLivro.php?id='>Deletar</a></td>";
             echo "</tr>";
             echo "</tbody>";
         }
         ?>
     </table>
-    <a href="home.html" class="btn btn-secondary float-start">Voltar para Início</a>
+    <a href="home.php" class="btn btn-secondary float-start">Voltar para Início</a>
 </body>
 
 </html>
