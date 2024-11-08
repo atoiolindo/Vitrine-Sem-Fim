@@ -11,7 +11,6 @@
 
 </head>
 <body>
-    <form action="home.php" method="post"></form>
 
     <nav class="menulateral">
 

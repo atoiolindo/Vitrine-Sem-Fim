@@ -67,3 +67,7 @@ h4 {
     background-size: cover;
     max-width: 100%;
 }
+
+.menulateral {
+    text-align: left;
+}
