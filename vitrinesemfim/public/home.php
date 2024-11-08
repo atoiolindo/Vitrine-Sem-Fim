@@ -19,7 +19,7 @@ require_once "../controle/verificaLogado.php";
     <div class="corpo">
         <fieldset>
             <legend>Cadastrar</legend>
-            <a href="cliente.php" class="btn btn-secondary">Cadastrar cliente</a>
+            <a href="clienteform.php" class="btn btn-secondary">Cadastrar cliente</a>
             <a href="autorform.php" class="btn btn-secondary">Cadastrar autor</a>
             <a href="form_vendedor.php" class="btn btn-secondary">Cadastrar vendedor</a>
             <a href="formpagamento.php" class="btn btn-secondary">Cadastrar pagamento</a>
