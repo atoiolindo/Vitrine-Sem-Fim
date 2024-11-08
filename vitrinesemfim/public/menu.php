@@ -20,7 +20,7 @@
 
         <ul>
             <li class="itemmenu">
-                <a href="#">
+                <a href="home.php">
                     <span class= "icon"> <i class="bi bi-house"> </i> </span>
                     <span class= "txtlink"> Página Inicial </span>
                 </a>
@@ -41,13 +41,6 @@
                 <a href="#">
                     <span class= "icon"> <i class="bi bi-search"> </i> </span>
                     <span class= "txtlink"> Pesquisar </span>
-
-                </a>
-            </li>  
-            <li class="itemmenu">
-                <a href="#">
-                    <span class= "icon"></span>
-                    <span class= "txtlink"></span>
 
                 </a>
             </li>

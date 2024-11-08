@@ -68,6 +68,8 @@ h4 {
     max-width: 100%;
 }
 
-.menulateral {
+.btnexpandir {
     text-align: left;
+    margin-left: 2%;
+    margin-top: 2%;
 }
