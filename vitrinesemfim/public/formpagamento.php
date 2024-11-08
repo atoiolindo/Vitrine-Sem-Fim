@@ -1,5 +1,5 @@
 <?php
-require_once "../controle/verificarlogado.php";
+require_once "../controle/verificaLogado.php";
 
 if (isset($_GET['id'])) {
     // echo "editar";
@@ -120,7 +120,7 @@ if (isset($_GET['id'])) {
             </div>
 
             <input type="submit" value="<?php echo $botao; ?>" class="btn btn-secondary mt-3">
-            
+
 
         </div>
 
