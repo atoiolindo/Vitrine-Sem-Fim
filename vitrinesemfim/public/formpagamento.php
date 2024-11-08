@@ -14,7 +14,8 @@ if (isset($_GET['id'])) {
     $atraso = $linha['atraso'];
     $multa = $linha['multa'];
     $final = $linha['final'];
-    $final = $linha['final'];
+    $idvendedor = $linha['idvendedor'];
+    $idemprestimo = $linha['idemprestimo'];
 
     // $acao = "editar";
     $botao = "Salvar";
@@ -24,6 +25,8 @@ if (isset($_GET['id'])) {
     $atraso = '';
     $multa = '';
     $final = '';
+    $idvendedor = '';
+    $idemprestimo = '';
 
     // $acao = "cadastrar";
     $botao = "Cadastrar";
@@ -107,7 +110,12 @@ if (isset($_GET['id'])) {
                     while ($linha = mysqli_fetch_array($resultados)) {
                         $id = $linha['idemprestimo'];
 
-                        echo "<option value='$id'>$id</option>";
+                        if ($id == $idemprestimo) {
+                            $selecionado = 'selected';
+                        } else {
+                            $selecionado = '';
+                        }
+                        echo "<option value='$id' $selecionado>$id</option>";
                     }
                     ?>
                 </select>
