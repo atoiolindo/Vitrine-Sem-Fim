@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/bootstrap.css">
     <title>Document</title>
-    <link rel = "stylesheet" href="./css/estilo.css"> 
+    <link rel="stylesheet" href="./css/estilo.css">
 
 </head>
 
@@ -32,7 +32,7 @@
         $resultados = mysqli_query($conexao, $sql);
         $i = 0;
         while ($linha = mysqli_fetch_array($resultados)) {
-            $i++;
+            $id = $linha['idpagamento'];
             $data = $linha['data_emprestimo'];
             $emprestimo = $linha['data_entrega'];
             $cliente = $linha['cliente_idcliente'];
@@ -48,6 +48,7 @@
             echo "<td>$livro</td>";
             echo "<td>$vendedor</td>";
             echo "<td><a href='../controle/deletarEmprestimo.php?id=$id' class='btn btn-danger'>Apagar</a></td>";
+            echo "<td><a href='formpagamento.php?id=$id'>Editar</a></td>";
             echo "</tr>";
             echo "</tbody>";
         }
