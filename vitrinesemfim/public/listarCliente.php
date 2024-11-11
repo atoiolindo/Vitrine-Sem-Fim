@@ -56,6 +56,7 @@ require_once "../controle/verificaLogado.php";
             echo "<td>$endereco</td>";
             echo "<td>$email</td>";
             echo "<td><a href='../controle/deletarCliente.php?id=$id' class='btn btn-danger'>Apagar</a></td>";
+            echo "<td><a href='clienteform.php?id=$id'>Editar</a></td>";
             echo "</tr>";
             echo "</tbody>";
         }
