@@ -47,6 +47,7 @@
             echo "<td>$cliente</td>";
             echo "<td>$livro</td>";
             echo "<td>$vendedor</td>";
+            echo "<td><a href='../controle/deletarEmprestimo.php?id=$id' class='btn btn-danger'>Apagar</a></td>";
             echo "</tr>";
             echo "</tbody>";
         }

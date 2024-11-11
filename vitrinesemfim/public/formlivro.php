@@ -5,14 +5,16 @@ if (isset($GET['id'])) {
     require_once "../controle/conexao.php";
 
     $id = $GET['id'];
-    $sql = "SELECT * FROM paciente WHERE idpaciente = $id";
-    $resultado = mysqli_query($conexao, $sql);
+    $sql = "SELECT * FROM livro WHERE idlivro = $id";
+    $resultado = mysqli_query( $conexao, $sql);
 
     $linha = mysqli_fetch_array($resultado);
 
     $nome = $linha['nome'];
-    $cpf = $linha['cpf'];
-    $telefone = $linha['telefone'];
+    $genero = $linha['genero'];
+    $idautor = $linha['autor_idautor'];
+    $isbn = $linha ['isbn'];
+    $estado = $linha ['estado'];
 
     $botao = "Salvar";
 } else {
@@ -74,25 +76,36 @@ if (isset($GET['id'])) {
 
                     $sql = "SELECT idautor, nome FROM autor";
 
-                    $resultados = mysqli_query($conexao, $sql);
-                    $i = 0;
+                        $resultados = mysqli_query($conexao, $sql);
 
-                    while ($linha = mysqli_fetch_array($resultados)) {
-                        $i++;
-                        $id = $linha['idautor'];
-                        $nome = $linha['nome'];
+                        while ($linha = mysqli_fetch_array($resultados)) {
+
+                            $id2 = $linha['idautor'];
+                            $nome = $linha['nome'];
+                            
+                            if ($id2 == $idautor) {
+                                $selecionado = 'selected';
+                            } else {
+                                $selecionado = '';
+                            }
 
 
-                        echo "<tbody>";
-                        echo "<tr>";
-                        echo "<th scope='row'>$i</th>";
-                        echo "<td>$nome</td>";
-                        echo "<td>$id</td>";
-                        echo "</tr>";
-                        echo "</tbody>";
-                    }
-                    ?>
-                </select>
+                            echo "<tbody>";
+                            echo "<tr>";
+                            echo "<th scope='row'>$i</th>";
+                            echo "<td>$nome</td>";
+                            echo "<td>$id2</td>";
+                            echo "</tr>";
+                            echo "</tbody>";
+
+                            echo "<option value='$id2' $selecionado>$nome</option>";
+
+                        }
+                        ?>
+                    </select>
+                </div>
+
+                <input type="submit" value="<?php echo $botao; ?>" class="btn btn-secondary mt-3">
             </div>
 
             <input type="submit" value="<?php echo $botao; ?>" class="btn btn-secondary mt-3">

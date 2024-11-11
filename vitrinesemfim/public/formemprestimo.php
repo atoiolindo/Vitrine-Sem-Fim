@@ -11,23 +11,22 @@ if (isset($_GET['id'])) {
 
     $linha = mysqli_fetch_array($resultado);
 
-    $atraso = $linha['atraso'];
-    $multa = $linha['multa'];
-    $final = $linha['valor_final'];
-    $idvendedor = $linha['vendedor_idvendedor'];
-    $idemprestimo = $linha['emprestimo_idemprestimo'];
-    $pago = $linha['valor_pago'];
+    $emprestimo = $linha['data_emprestimo'];
+    $data = $linha['data_entrega'];
+    $cliente = $linha['cliente_idcliente'];
+    $livro = $linha['livro_idlivro'];
+    $vendedor = $linha['vendedor_idvendedor'];
 
     // $acao = "editar";
     $botao = "Salvar";
 } else {
     // echo "cadastrar";
     $id = 0;
-    $atraso = '';
-    $multa = '';
-    $final = '';
-    $idvendedor = '';;
-    $pago = '';
+    $emprestimo = '';
+    $data = '';
+    $cliente = '';
+    $livro = '';;
+    $vendedor = '';
 
     // $acao = "cadastrar";
     $botao = "Cadastrar";
@@ -73,11 +72,17 @@ if (isset($_GET['id'])) {
                     $resultados = mysqli_query($conexao, $sql);
 
                     while ($linha = mysqli_fetch_array($resultados)) {
-                        $id = $linha['idcliente'];
+                        $id2 = $linha['cliente'];
                         $nome = $linha['nome'];
 
+                        if ($id2 == $cliente) {
+                            $selecionado = 'selected';
+                        } else {
+                            $selecionado = '';
+                        }
 
-                        echo "<option value='$id'>$nome</option>";
+
+                        echo "<option value='$id2'>$nome</option>";
                     }
 
                     ?>
@@ -96,12 +101,19 @@ if (isset($_GET['id'])) {
                     $resultados = mysqli_query($conexao, $sql);
 
                     while ($linha = mysqli_fetch_array($resultados)) {
-                        $id = $linha['idvendedor'];
+                        $id3 = $linha['vendedor'];
                         $nome = $linha['nome'];
                         // $crm = $linha['crm'];
                         // $area = $linha['area'];
 
-                        echo "<option value='$id'>$nome</option>";
+                        if ($id3 == $vendedor) {
+                            $selecionado = 'selected';
+                        } else {
+                            $selecionado = '';
+                        }
+
+
+                        echo "<option value='$id3'>$nome</option>";
                     }
                     ?>
                 </select>
@@ -119,10 +131,17 @@ if (isset($_GET['id'])) {
                     $resultados = mysqli_query($conexao, $sql);
 
                     while ($linha = mysqli_fetch_array($resultados)) {
-                        $id = $linha['idlivro'];
+                        $id4 = $linha['livro'];
                         $nome = $linha['nome'];
 
-                        echo "<option value='$id'>$nome</option>";
+                        if ($id4 == $cliente) {
+                            $selecionado = 'selected';
+                        } else {
+                            $selecionado = '';
+                        }
+
+
+                        echo "<option value='$id4'>$nome</option>";
                     }
                     ?>
                 </select>
