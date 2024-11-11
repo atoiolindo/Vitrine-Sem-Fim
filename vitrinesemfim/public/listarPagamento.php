@@ -52,6 +52,7 @@ require_once "../controle/verificaLogado.php";
             echo "<td>$idvendedor</td>";
             echo "<td>$idemprestimo</td>";
             echo "<td>$pago</td>";
+            echo "<td><a href='../controle/deletarPagamento.php?id=$id' class='btn btn-danger'>Apagar</a></td>";
             echo "<td><a href='formpagamento.php?id=$id'>Editar</a></td>";
             echo "</tr>";
             echo "</tbody>";
