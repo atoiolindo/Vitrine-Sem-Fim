@@ -6,7 +6,7 @@ if (isset($_GET['id'])) {
     require_once "../controle/conexao.php";
 
     $id = $_GET['id'];
-    $sql = "SELECT * FROM pagamento WHERE idpagamento = $id";
+    $sql = "SELECT * FROM emprestimo WHERE idemprestimo = $id";
     $resultado = mysqli_query($conexao, $sql);
 
     $linha = mysqli_fetch_array($resultado);
@@ -47,10 +47,9 @@ if (isset($_GET['id'])) {
 
 <body class="cadas">
     <h3>Empréstimo</h3>
-    
     <form action="../controle/salvarEmprestimo.php?id=<?php echo $id; ?>" method="post">
-   
-    <div class="container"> 
+
+        <div class="container">
 
             <div>
                 <label for="emprestimo" class="form-label">Data de empréstimo</label>
