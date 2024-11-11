@@ -82,7 +82,7 @@ if (isset($_GET['id'])) {
                         }
 
 
-                        echo "<option value='$id2'>$nome</option>";
+                        echo "<option value='$id2' $selecionado>$nome</option>";
                     }
 
                     ?>
@@ -113,7 +113,7 @@ if (isset($_GET['id'])) {
                         }
 
 
-                        echo "<option value='$id3'>$nome</option>";
+                        echo "<option value='$id3' $selecionado>$nome</option>";
                     }
                     ?>
                 </select>
@@ -141,7 +141,7 @@ if (isset($_GET['id'])) {
                         }
 
 
-                        echo "<option value='$id4'>$nome</option>";
+                        echo "<option value='$id4' $selecionado>$nome</option>";
                     }
                     ?>
                 </select>
