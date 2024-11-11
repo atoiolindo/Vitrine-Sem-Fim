@@ -17,7 +17,7 @@
 
         <div>
             <label for="emprestimo" class="form-label">Data de empréstimo</label>
-            <input type="date" name="emprestimo" class="form-control" id="emprestimo">
+            <input type="date" name="emprestimo" required class="form-control" id="emprestimo">
         </div>
 
         <div>

@@ -48,7 +48,7 @@ if (isset($GET['id'])) {
        
             <div>
                 <label for="nome" class="form-label">Nome</label>
-                <input type="text" name="nome" class="form-control" value="<?php echo $nome; ?>">
+                <input type="text" name="nome" required class="form-control" value="<?php echo $nome; ?>">
             </div>
 
             <div>

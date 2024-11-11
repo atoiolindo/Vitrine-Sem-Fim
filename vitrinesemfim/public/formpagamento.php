@@ -56,7 +56,7 @@ if (isset($_GET['id'])) {
 
             <div>
                 <label for="atraso" class="form-label">Dias atrasados</label>
-                <input type="text" name="atraso" class="form-control" value="<?php echo $atraso; ?>" id="atraso">
+                <input type="text" name="atraso" required class="form-control" value="<?php echo $atraso; ?>" id="atraso">
             </div>
 
             <div>
