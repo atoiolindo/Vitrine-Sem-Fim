@@ -27,7 +27,7 @@
         if (isset($_GET['valor'])) {
             require_once "../controle/conexao.php";
             $sql = "SELECT * FROM autor WHERE nome LIKE '%valor%'";
-           $resultados = mysqli_query($conexao, $sql); 
+            $resultados = mysqli_query($conexao, $sql); 
             
             if (mysqli_num_rows($resultados) == 0) {
                 echo "Não encontrado";
