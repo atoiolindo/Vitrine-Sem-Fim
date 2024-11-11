@@ -28,6 +28,7 @@ if (isset($_GET['id'])) {
     $final = '';
     $idvendedor = '';
     $idemprestimo = '';
+    $pago = '';
 
     // $acao = "cadastrar";
     $botao = "Cadastrar";
