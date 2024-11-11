@@ -48,7 +48,7 @@ if (isset($_GET['id'])) {
 </head>
 
 <body class="cadas">
-    <form action="pagamento.php?id=<?php echo $id; ?>" method="post">
+    <form action="../controle/salvarPagamento.php?id=<?php echo $id; ?>" method="post">
 
         <h3>Pagamento</h3> <br>
         <div class="container">
