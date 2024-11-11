@@ -11,7 +11,8 @@
 
 <body class="cadas">
     <h3>Empréstimo</h3>
-    <form action="emprestimo.php">
+    
+    <form action="emprestimo.php?id=<?php echo $id; ?>" method="post">
    
     <div class="container"> 
 

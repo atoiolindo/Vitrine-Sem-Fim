@@ -47,8 +47,8 @@ if (isset($_GET['id'])) {
 
 <body class="cadas">
     <h3>Cliente</h3><br>
-    <form action="cliente.php" method="post">
-
+    <form action="../controle/salvarCliente.php?id=<?php echo $id; ?>" method="post">
+   
 
         <div class="container">
 
