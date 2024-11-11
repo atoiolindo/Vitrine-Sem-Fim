@@ -21,8 +21,10 @@ if (isset($GET['id'])) {
     //echo cadastrar
     $id = 0;
     $nome = '';
-    $cpf = '';
-    $telefone = '';
+    $genero = '';
+    $idautor = '';
+    $isbn = '';
+    $estado = '';
 
     $botao = "Cadastrar";
 }
@@ -42,8 +44,8 @@ if (isset($GET['id'])) {
 </head>
 
 <body class="cadas">
-    <form action="editarLivro.php?id=<?php echo $id; ?>" method="post">
-
+    <form action="livro.php?id=<?php echo $id; ?>" method="post">
+        
         <h3>Livro</h3> <br>
         <div class="container">
 
@@ -69,10 +71,10 @@ if (isset($GET['id'])) {
             </div>
 
             <div>
-                <label for="idautor" class="form-label">AUTOR</label>
-                <select name="idautor">
-                    <?php
-                    require_once "../controle/conexao.php";
+                <label for="idautor" class="form-label">Autor</label>
+                    <select name="idautor">
+                        <?php
+                        require_once "../controle/conexao.php";
 
                     $sql = "SELECT idautor, nome FROM autor";
 
@@ -103,9 +105,12 @@ if (isset($GET['id'])) {
                         }
                         ?>
                     </select>
-                </div>
+                </div> <br>
+
 
                 <input type="submit" value="<?php echo $botao; ?>" class="btn btn-secondary mt-3">
+                
+            
             </div>
 
             <input type="submit" value="<?php echo $botao; ?>" class="btn btn-secondary mt-3">
