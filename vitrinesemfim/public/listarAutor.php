@@ -46,6 +46,7 @@ require_once "../controle/verificaLogado.php";
             echo "<td>$nome</td>";
             echo "<td>$nacionalidade</td>";
             echo "<td>$biografia</td>";
+            echo "<td><a href='../controle/deletarAutorphp?id=$id' class='btn btn-danger'>Apagar</a></td>";
             echo "</tr>";
             echo "</tbody>";
         }
