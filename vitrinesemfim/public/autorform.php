@@ -41,7 +41,8 @@ if (isset($_GET['id'])) {
 </head>
 
 <body class="cadas">
-    <form action="autor.php" method="get">
+    
+    <form action="autor.php?id=<?php echo $id; ?>" method="post">
 
         <h3>Autor</h3> <br>
         <div class="container">
