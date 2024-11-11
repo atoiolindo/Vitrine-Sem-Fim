@@ -44,7 +44,7 @@ if (isset($GET['id'])) {
 </head>
 
 <body class="cadas">
-    <form action="livro.php?id=<?php echo $id; ?>" method="post">
+    <form action="../controle/salvarLivro.php?id=<?php echo $id; ?>" method="post">
         
         <h3>Livro</h3> <br>
         <div class="container">

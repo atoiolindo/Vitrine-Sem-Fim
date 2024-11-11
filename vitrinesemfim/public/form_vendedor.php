@@ -40,7 +40,7 @@ if (isset($_GET['id'])) {
 </head>
 
 <body class="cadas">
-    <form action="tabela_vendedor.php?id=<?php echo $id; ?>" method="post">
+    <form action="../controle/salvarVendedor.php?id=<?php echo $id; ?>" method="post">
         <!-- <div class="mb-3"></div> -->
         <h3>Vendedor</h3> <br>
 
