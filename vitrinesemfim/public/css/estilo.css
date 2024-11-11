@@ -58,12 +58,12 @@ h4 {
 }
 
 .listar {
-    background-image: url('/wallpaperinfinito.jpg');
+    background-image: url('../assets/wallpaperinfinito.jpg');
     background-size: cover;
     max-width: 100%;
 }
 .cadas {
-    background-image: url('/wallpapercadastro.jpg');
+    background-image: url('../assets/wallpapercadastro.jpg');
     background-size: cover;
     max-width: 100%;
 }
