@@ -26,8 +26,7 @@ if (isset($_GET['id'])) {
     $atraso = '';
     $multa = '';
     $final = '';
-    $idvendedor = '';
-    $idemprestimo = '';
+    $idvendedor = '';;
     $pago = '';
 
     // $acao = "cadastrar";
@@ -56,17 +55,17 @@ if (isset($_GET['id'])) {
 
             <div>
                 <label for="atraso" class="form-label">Dias atrasados</label>
-                <input type="text" name="atraso" class="form-control" value="<?php echo $atraso; ?>" id="atraso">
+                <input type="text" name="atraso" required class="form-control" value="<?php echo $atraso; ?>" id="atraso">
             </div>
 
             <div>
                 <label for="multa" class="form-label">Multa</label>
-                <input type="text" name="multa" class="form-control" value="<?php echo $multa; ?>" id="multa">
+                <input type="text" name="multa" required class="form-control" value="<?php echo $multa; ?>" id="multa">
             </div>
 
             <div>
                 <label for="final" class="form-label">Valor total</label>
-                <input type="text" name="final" class="form-control" value="<?php echo $final; ?>" id="final">
+                <input type="text" name="final" required class="form-control" value="<?php echo $final; ?>" id="final">
             </div>
 
 
@@ -117,7 +116,7 @@ if (isset($_GET['id'])) {
                         } else {
                             $selecionado = '';
                         }
-                        echo "<option value='$id3' $selecionado>$id</option>";
+                        echo "<option value='$id3' $selecionado>$id3</option>";
                     }
                     ?>
                 </select>
@@ -126,7 +125,7 @@ if (isset($_GET['id'])) {
 
             <div>
                 <label for="pago" class="form-label">Valor pago</label>
-                <input type="text" name="pago" class="form-control" value="<?php echo $pago; ?>" id="pago">
+                <input type="text" name="pago" required class="form-control" value="<?php echo $pago; ?>" id="pago">
             </div>
 
             <input type="submit" value="<?php echo $botao; ?>" class="btn btn-secondary mt-3">
