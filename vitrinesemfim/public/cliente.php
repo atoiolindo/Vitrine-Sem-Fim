@@ -7,7 +7,7 @@ $id = $_GET['id'];
 $nome = $_POST['nome'];
 $cpf = $_POST['cpf'];
 $telefone = $_POST['telefone'];
-$data = $_POST['data'];
+$data = $_POST['data_nascimento'];
 $endereco = $_POST['endereco'];
 $email = $_POST['email'];
 

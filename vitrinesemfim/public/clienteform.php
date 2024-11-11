@@ -14,7 +14,7 @@ if (isset($_GET['id'])) {
     $nome = $linha['nome'];
     $cpf = $linha['cpf'];
     $telefone = $linha['telefone'];
-    $data_nascimento = $linha['data_nascimento'];
+    $data = $linha['data_nascimento'];
     $endereco = $linha['endereco'];
     $email = $linha['email'];
 
@@ -26,7 +26,7 @@ if (isset($_GET['id'])) {
     $nome = '';
     $cpf = '';
     $telefone = '';
-    $data_nascimento = '';
+    $data = '';
     $endereco = '';
     $email = '';
 
@@ -47,7 +47,7 @@ if (isset($_GET['id'])) {
 
 <body class="cadas">
     <h3>Cliente</h3><br>
-    <form action="cliente.php" method="post">
+    <form action="cliente.php?id=<?php echo $id;?>" method="post">
 
 
         <div class="container">
@@ -71,7 +71,7 @@ if (isset($_GET['id'])) {
 
             <div>
                 <label for="data_nascimento" class="form-label">Data de nascimento</label>
-                <input type="text" name="data_nascimento" class="form-control" id="data_nascimento">
+                <input type="date" name="data_nascimento" class="form-control" id="data_nascimento">
             </div>
 
             <div>
@@ -84,7 +84,7 @@ if (isset($_GET['id'])) {
                 <input type="text" name="email" class="form-control" id="email">
             </div>
 
-
+            <input type="hidden" name="id" >
 
             <input type="submit" value="<?php echo $botao; ?>" class="btn btn-secondary mt-3">
 
