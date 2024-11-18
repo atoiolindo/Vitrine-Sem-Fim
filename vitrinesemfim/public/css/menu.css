@@ -44,15 +44,15 @@ nav.menulateral:hover{
     list-style-type: none;
 }
 
-ul li.item-menu{
+ul li.itemmenu{
     transition: .2s
 }
 
-ul li.item-menu:hover{
+ul li.itemmenu:hover{
     background: #FF0077;
 }
 
-ul li.item-menu a{
+ul li.itemmenu a{
     color: #fff;
     text-decoration: none;
     font-size: 20px;
@@ -63,10 +63,10 @@ ul li.item-menu a{
     line-height: 40px;
 }
 
-ul li.item-menu a .txt-link{
+ul li.itemmenu a .txtlink{
     margin-left: 40px;
 }
 
-ul li.item-menu a .icon > i{
+ul li.itemmenu a .icon > i{
     font-size: 30px;
 }
