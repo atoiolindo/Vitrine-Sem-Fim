@@ -6,11 +6,11 @@ require_once "./conexao.php";
 // $acao = $_GET['acao'];
 $id = $_GET['id'];
 
-$data_emprestimo = $_POST['data_emprestimo'];
-$data_entrega = $_POST['data_entrega'];
-$idcliente = $_POST['idcliente'];
-$idlivro= $_POST['idlivro'];
-$idvendedor = $_POST['idvendedor'];
+$data_emprestimo = $_POST['emprestimo'];
+$data_entrega = $_POST['data'];
+$idcliente = $_POST['cliente'];
+$idlivro = $_POST['livro'];
+$idvendedor = $_POST['vendedor'];
 
 
 if ($id == 0) {

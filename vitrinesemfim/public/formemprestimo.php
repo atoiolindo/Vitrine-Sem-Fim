@@ -47,18 +47,18 @@ if (isset($_GET['id'])) {
 
 <body class="cadas">
     <h3>Empréstimo</h3>
-    <form action="../controle/salvarEmprestimo.php?id=<?php echo $id; ?>" method="post">
+    <form action="emprestimo.php?id=<?php echo $id; ?>" method="post">
 
         <div class="container">
 
             <div>
                 <label for="emprestimo" class="form-label">Data de empréstimo</label>
-                <input type="date" name="emprestimo" required class="form-control" id="emprestimo">
+                <input type="date" name="emprestimo" required class="form-control" value="<?php echo $emprestimo; ?>" id="emprestimo">
             </div>
 
             <div>
                 <label for="data" class="form-label">Data de entrega</label>
-                <input type="date" name="data" required class="form-control" id="data">
+                <input type="date" name="data" required class="form-control" value="<?php echo $data; ?>" id="data">
             </div>
 
             <div>
@@ -72,7 +72,7 @@ if (isset($_GET['id'])) {
                     $resultados = mysqli_query($conexao, $sql);
 
                     while ($linha = mysqli_fetch_array($resultados)) {
-                        $id2 = $linha['cliente'];
+                        $id2 = $linha['idcliente'];
                         $nome = $linha['nome'];
 
                         if ($id2 == $cliente) {
@@ -101,7 +101,7 @@ if (isset($_GET['id'])) {
                     $resultados = mysqli_query($conexao, $sql);
 
                     while ($linha = mysqli_fetch_array($resultados)) {
-                        $id3 = $linha['vendedor'];
+                        $id3 = $linha['idvendedor'];
                         $nome = $linha['nome'];
                         // $crm = $linha['crm'];
                         // $area = $linha['area'];
@@ -131,7 +131,7 @@ if (isset($_GET['id'])) {
                     $resultados = mysqli_query($conexao, $sql);
 
                     while ($linha = mysqli_fetch_array($resultados)) {
-                        $id4 = $linha['livro'];
+                        $id4 = $linha['idlivro'];
                         $nome = $linha['nome'];
 
                         if ($id4 == $cliente) {
