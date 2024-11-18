@@ -34,7 +34,7 @@ require_once "../controle/verificaLogado.php";
         $id = 0;
         $resultados = mysqli_query($conexao, $sql);
         while ($linha = mysqli_fetch_array($resultados)) {
-            $id = $linha['idautor'];;
+            $id = $linha['idautor'];
             $nome = $linha['nome'];
             $nacionalidade = $linha['nacionalidade'];
             $biografia = $linha['biografia'];
