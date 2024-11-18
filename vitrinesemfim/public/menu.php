@@ -47,7 +47,7 @@
         </ul>
     </nav>
 
-
+    <script src="menu.js"></script>
 
 </body>
 </html>
