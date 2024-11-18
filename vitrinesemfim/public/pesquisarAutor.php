@@ -45,6 +45,7 @@ if (isset($_GET['valor'])) {
             echo "<td>Nacionalidade</td>";
             echo "<td>Biografia</td>";
             while ($linha = mysqli_fetch_array($resultados)) {
+                $id = $linha['idautor'];
                 $id = $linha['idcliente'];
                 $nome = $linha['nome'];
                 $nacionalidade = $linha['nacionalidade'];
