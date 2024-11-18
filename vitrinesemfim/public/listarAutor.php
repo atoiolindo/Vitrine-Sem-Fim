@@ -41,7 +41,7 @@ require_once "../controle/verificaLogado.php";
         
             echo "<tbody>";
             echo "<tr>";
-            echo "<th scope='row'>$i</th>";
+            echo "<th scope='row'>$id</th>";
             echo "<td>$nome</td>";
             echo "<td>$nacionalidade</td>";
             echo "<td>$biografia</td>";
