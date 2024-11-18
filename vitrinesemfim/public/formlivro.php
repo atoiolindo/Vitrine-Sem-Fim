@@ -1,20 +1,20 @@
 <?php
-require_once "../controle/conexao.php";
+require_once "../controle/verificaLogado.php";
 
-if (isset($GET['id'])) {
+if (isset($_GET['id'])) {
     require_once "../controle/conexao.php";
 
-    $id = $GET['id'];
+    $id = $_GET['id'];
     $sql = "SELECT * FROM livro WHERE idlivro = $id";
-    $resultado = mysqli_query( $conexao, $sql);
+    $resultado = mysqli_query($conexao, $sql);
 
     $linha = mysqli_fetch_array($resultado);
 
     $nome = $linha['nome'];
     $genero = $linha['genero'];
     $idautor = $linha['autor_idautor'];
-    $isbn = $linha ['isbn'];
-    $estado = $linha ['estado'];
+    $isbn = $linha['isbn'];
+    $estado = $linha['estado'];
 
     $botao = "Salvar";
 } else {
@@ -45,75 +45,74 @@ if (isset($GET['id'])) {
 
 <body class="cadas">
     <form action="../controle/salvarLivro.php?id=<?php echo $id; ?>" method="post">
-        
+
         <h3>Livro</h3> <br>
         <div class="container">
 
 
             <div>
                 <label for="nome" class="form-label">Nome</label>
-                <input type="text" name="nome" required class="form-control" value="<?php echo $nome; ?>">
+                <input type="text" name="nome" required class="form-control" value="<?php echo $nome; ?>" id="nome">
             </div>
 
             <div>
                 <label for="genero" class="form-label">Genero</label>
-                <input type="text" name="genero" required class="form-control" value="<?php echo $genero; ?>">
+                <input type="text" name="genero" required class="form-control" value="<?php echo $genero; ?>" id="genero">
             </div>
 
             <div>
                 <label for="isbn" class="form-label">ISBN</label>
-                <input type="text" name="isbn" required class="form-control" value="<?php echo $isbn; ?>">
+                <input type="text" name="isbn" required class="form-control" value="<?php echo $isbn; ?>" id="isbn">
             </div>
 
             <div>
                 <label for="estado" class="form-label">Estado</label>
-                <input type="text" name="estado" required class="form-control" value="<?php echo $estado; ?>">
+                <input type="text" name="estado" required class="form-control" value="<?php echo $estado; ?>" id="estado">
             </div>
 
             <div>
-                <label for="idautor" class="form-label">Autor</label>
-                    <select name="idautor">
-                        <?php
-                        require_once "../controle/conexao.php";
+                <label for="idautor" class="form-label" id="idautor">Autor</label>
+                <select name="idautor">
+                    <?php
+                    require_once "../controle/conexao.php";
 
                     $sql = "SELECT idautor, nome FROM autor";
 
-                        $resultados = mysqli_query($conexao, $sql);
+                    $resultados = mysqli_query($conexao, $sql);
 
-                        while ($linha = mysqli_fetch_array($resultados)) {
+                    while ($linha = mysqli_fetch_array($resultados)) {
 
-                            $id2 = $linha['idautor'];
-                            $nome = $linha['nome'];
-                            
-                            if ($id2 == $idautor) {
-                                $selecionado = 'selected';
-                            } else {
-                                $selecionado = '';
-                            }
+                        $id2 = $linha['idautor'];
+                        $nome = $linha['nome'];
 
-
-                            echo "<tbody>";
-                            echo "<tr>";
-                            echo "<th scope='row'>$i</th>";
-                            echo "<td>$nome</td>";
-                            echo "<td>$id2</td>";
-                            echo "</tr>";
-                            echo "</tbody>";
-
-                            echo "<option value='$id2' $selecionado>$nome</option>";
-
+                        if ($id2 == $idautor) {
+                            $selecionado = 'selected';
+                        } else {
+                            $selecionado = '';
                         }
-                        ?>
-                    </select>
-                </div> <br>
 
 
-                <input type="submit" value="<?php echo $botao; ?>" class="btn btn-secondary mt-3">
-                
-            
-            </div>
+                        echo "<tbody>";
+                        echo "<tr>";
+                        echo "<th scope='row'>$i</th>";
+                        echo "<td>$nome</td>";
+                        echo "<td>$id2</td>";
+                        echo "</tr>";
+                        echo "</tbody>";
+
+                        echo "<option value='$id2' $selecionado>$nome</option>";
+                    }
+                    ?>
+                </select>
+            </div> <br>
+
 
             <input type="submit" value="<?php echo $botao; ?>" class="btn btn-secondary mt-3">
+
+
+        </div>
+
+        <input type="submit" value="<?php echo $botao; ?>" class="btn btn-secondary mt-3">
         </div>
 
     </form>
