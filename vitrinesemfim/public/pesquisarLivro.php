@@ -46,7 +46,7 @@ if (isset($_GET['valor'])) {
             echo "<td>IdAutor</td>";
             echo "<td>ISBN</td>";
             echo "<td>Estado</td>";
-         
+
             while ($linha = mysqli_fetch_array($resultados)) {
                 $id = $linha['idlivro'];
                 $nome = $linha['nome'];
@@ -54,7 +54,6 @@ if (isset($_GET['valor'])) {
                 $autor_idautor = $linha['autor_idautor'];
                 $isbn = $linha['isbn'];
                 $estado = $linha['estado'];
-               
 
                 echo "<tr>";
                 echo "<td>$id</td>";
@@ -63,7 +62,6 @@ if (isset($_GET['valor'])) {
                 echo "<td>$autor_idautor</td>";
                 echo "<td>$isbn</td>";
                 echo "<td>$estado</td>";
-                
                 echo "</tr>";
             }
         }
