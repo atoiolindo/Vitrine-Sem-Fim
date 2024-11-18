@@ -15,6 +15,8 @@ if (isset($_GET['id'])) {
     $data_nascimento = $linha['data_nascimento'];
     $endereco = $linha['endereco'];
     $email = $linha['email'];
+    // $acao = "editar";
+    $botao = "Salvar";
 } else {
     // echo "cadastrar";
     $id = 0;
@@ -24,6 +26,9 @@ if (isset($_GET['id'])) {
     $data_nascimento = '';
     $endereco = '';
     $email = '';
+
+    // $acao = "cadastrar";
+    $botao = "Cadastrar";
 }
 
 ?>
@@ -75,11 +80,6 @@ if (isset($_GET['id'])) {
 
             <input type="submit" value="<?php echo $botao; ?>" class="btn btn-secondary mt-3">
         </div>
-
-
-
-
-
 
     </form>
 
