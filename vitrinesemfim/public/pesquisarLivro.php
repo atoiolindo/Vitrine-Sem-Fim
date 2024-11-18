@@ -10,6 +10,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.css">
     <title>Document</title>
 </head>
 <body>
@@ -26,7 +27,7 @@
 
         if (isset($_GET['valor'])) {
             require_once "../controle/conexao.php";
-            $sql = "SELECT * FROM livro WHERE nome LIKE '%valor%'";
+            $sql = "SELECT * FROM livro WHERE nome LIKE '%$valor%'";
            $resultados = mysqli_query($conexao, $sql); 
             
             if (mysqli_num_rows($resultados) == 0) {
