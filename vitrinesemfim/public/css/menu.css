@@ -12,6 +12,61 @@
     text-align: left
 }
 
-nav.menu-lateral{
-    width: 100%
+nav.menulateral{
+    width:300px;
+    height: 100%;
+    background-color: #202020;
+    padding: 40px 0 40 px 1%;
+    box-shadow: 3px 0 0 #FF0077;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+nav.menulateral:hover{
+    width: 300px
+}
+
+.btnexpandir{
+    width: 100%;
+    padding-left: 10px;
+}
+
+.btnexpandir > i {
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.ulmenu{
+    height:100%;
+    list-style-type: none;
+}
+
+ul li.itemmenu{
+    transition: .2s
+}
+
+ul li.itemmenu:hover{
+    background: #FF0077;
+}
+
+ul li.itemmenu a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+
+    margin-bottom: 20px;
+    line-height: 40px;
+}
+
+ul li.itemmenu a .txtlink{
+    margin-left: 40px;
+}
+
+ul li.itemmenu a .icon > i{
+    font-size: 30px;
 }
