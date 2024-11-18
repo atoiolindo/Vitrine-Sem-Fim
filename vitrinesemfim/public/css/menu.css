@@ -48,6 +48,10 @@ ul li.itemmenu{
     transition: .2s
 }
 
+ul li.ativo{
+    background-color: #FF0077;
+}
+
 ul li.itemmenu:hover{
     background: #FF0077;
 }
