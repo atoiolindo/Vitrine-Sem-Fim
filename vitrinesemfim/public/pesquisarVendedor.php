@@ -16,7 +16,7 @@ else {$valor='';}
     <title>Document</title>
 </head>
 <body>
-    <form action="pesquisarVendedor.php" method="post">
+    <form action="pesquisarVendedor.php" method="get">
         Nome do Vendedor: <br>
         <input type="text" name="valor" value="<?php echo $valor; ?>"> <br> <br>
 
@@ -29,7 +29,7 @@ else {$valor='';}
 
         if (isset($_GET['valor'])) {
             require_once "../controle/conexao.php";
-            $sql = "SELECT * FROM livro WHERE nome LIKE '%$valor%'";
+            $sql = "SELECT * FROM vendedor WHERE nome LIKE '%$valor%'";
            $resultados = mysqli_query($conexao, $sql); 
             
             if (mysqli_num_rows($resultados) == 0) {
