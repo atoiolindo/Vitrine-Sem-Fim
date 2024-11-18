@@ -73,7 +73,7 @@ else {$valor='';}
             }
         }
         else {
-            echo "Procure um nome"; <br><br>
+            echo "Procure um nome"; 
         } 
     ?>
      <a href="home.php" class="btn btn-secondary float-start">Voltar para Início</a>
