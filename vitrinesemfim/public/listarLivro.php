@@ -1,4 +1,4 @@
-<?php 
+<?php
 require_once "../controle/verificaLogado.php";
 ?>
 <!DOCTYPE html>
@@ -9,7 +9,7 @@ require_once "../controle/verificaLogado.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/bootstrap.css">
     <title>Document</title>
-    <link rel = "stylesheet" href="./css/estilo.css"> 
+    <link rel="stylesheet" href="./css/estilo.css">
 
 </head>
 
@@ -33,9 +33,8 @@ require_once "../controle/verificaLogado.php";
         $sql = "SELECT * FROM livro";
 
         $resultados = mysqli_query($conexao, $sql);
-        $i = 0;
         while ($linha = mysqli_fetch_array($resultados)) {
-            $i++;
+            $id = $linha['idlivro'];
             $nome = $linha['nome'];
             $genero = $linha['genero'];
             $idautor = $linha['autor_idautor'];
@@ -44,13 +43,13 @@ require_once "../controle/verificaLogado.php";
 
             echo "<tbody>";
             echo "<tr>";
-            echo "<th scope='row'>$i</th>";
+            echo "<th scope='row'>$id</th>";
             echo "<td>$nome</td>";
             echo "<td>$genero</td>";
             echo "<td>$idautor</td>";
             echo "<td>$isbn</td>";
             echo "<td>$estado</td>";
-            echo "<td><a href='..controle/deletarLivro.php?id='>Deletar</a></td>";
+            echo "<td><a href='..controle/deletarLivro.php?id='$id'>Deletar</a></td>";
             echo "<td><a href='formlivro.php?id=$id'>Editar</a></td>";
             echo "</tr>";
             echo "</tbody>";

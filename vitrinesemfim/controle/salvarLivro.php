@@ -15,9 +15,9 @@ $estado = $_POST['estado'];
 
 if ($id == 0) {
     // Criar um comando SQL que grava no banco
-    $sql = "INSERT INTO livro (nome, genero, idautor, isbn, estado) VALUES ('$nome', '$genero', '$idautor', '$isbn', '$estado')";
+    $sql = "INSERT INTO livro (nome, genero, autor_idautor, isbn, estado) VALUES ('$nome', '$genero', '$idautor', '$isbn', '$estado')";
 } else {
-    $sql = "UPDATE livro SET nome = '$nome', genero = '$genero', idautor = '$idautor', isbn = '$isbn', estado = '$estado' 
+    $sql = "UPDATE livro SET nome = '$nome', genero = '$genero', autor_idautor = '$idautor', isbn = '$isbn', estado = '$estado' 
     WHERE idlivro = $id";
 }
 
