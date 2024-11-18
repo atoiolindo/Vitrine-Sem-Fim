@@ -9,15 +9,15 @@ $id = $_GET['id'];
 $nome = $_POST['nome'];
 $cpf = $_POST['cpf'];
 $telefone = $_POST['telefone'];
-$data_nascimento = $_POST['data_nascimento'];
-$endereco = $_POST['endereco'];
+$data_nascimento = $_POST['nascimento'];
+$endereco = $_POST['endereço'];
 $email = $_POST['email'];
 
 if ($id == 0) {
     // Criar um comando SQL que grava no banco
     $sql = "INSERT INTO vendedor (nome, cpf, telefone, data_nascimento, endereco, email) VALUES ('$nome', '$cpf', '$telefone', '$data_nascimento', '$endereco', '$email' )";
 } else {
-    $sql = "UPDATE cliente SET nome = '$nome', cpf = '$cpf', telefone = '$telefone', data_nascimento = '$data_nascimento', endereco = '$endereco', email = '$email' 
+    $sql = "UPDATE vendedor SET nome = '$nome', cpf = '$cpf', telefone = '$telefone', nascimento = '$data_nascimento', endereço = '$endereco', email = '$email' 
     WHERE idvendedor = $id";
 }
 
