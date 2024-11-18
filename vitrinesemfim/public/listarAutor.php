@@ -31,7 +31,7 @@ require_once "../controle/verificaLogado.php";
         require_once "../controle/conexao.php";
 
         $sql = "SELECT * FROM autor";
-
+        $id = 0;
         $resultados = mysqli_query($conexao, $sql);
         while ($linha = mysqli_fetch_array($resultados)) {
             $id = $linha['idautor'];;
