@@ -128,8 +128,7 @@ if (isset($_GET['id'])) {
                 <input type="text" name="pago" required class="form-control" value="<?php echo $pago; ?>" id="pago">
             </div>
 
-            <input type="submit" value="<?php echo $botao; ?>" class="btn btn-secondary mt-3">
-
+            <input type="submit" value="<?php echo $botao; ?>" class="btn btn-secondary mt-3">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
 
         </div>
 

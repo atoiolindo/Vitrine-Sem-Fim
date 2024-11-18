@@ -31,22 +31,21 @@ require_once "../controle/verificaLogado.php";
         require_once "../controle/conexao.php";
 
         $sql = "SELECT * FROM autor";
-
+        $id = 0;
         $resultados = mysqli_query($conexao, $sql);
-        $i = 0;
         while ($linha = mysqli_fetch_array($resultados)) {
-            $i++;
+            $id = $linha['idautor'];
             $nome = $linha['nome'];
             $nacionalidade = $linha['nacionalidade'];
             $biografia = $linha['biografia'];
         
             echo "<tbody>";
             echo "<tr>";
-            echo "<th scope='row'>$i</th>";
+            echo "<th scope='row'>$id</th>";
             echo "<td>$nome</td>";
             echo "<td>$nacionalidade</td>";
             echo "<td>$biografia</td>";
-            echo "<td><a href='../controle/deletarAutorphp?id=$id' class='btn btn-danger'>Apagar</a></td>";
+            echo "<td><a href='../controle/deletarAutor.php?id=$id' class='btn btn-danger'>Apagar</a></td>";
             echo "<td><a href='autorform.php?id=$id'>Editar</a></td>";
             echo "</tr>";
             echo "</tbody>";
