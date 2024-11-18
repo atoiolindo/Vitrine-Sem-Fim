@@ -57,18 +57,24 @@ if (isset($_GET['valor'])) {
                 $endereco = $linha['endereco'];
                 $email = $linha['email'];
 
-                echo "<tr>";
-                echo "<td>$id</td>";
-                echo "<td>$nome</td>";
-                echo "<td>$cpf</td>";
-                echo "<td>$telefone</td>";
-                echo "<td>$data_nascimento</td>";
-                echo "<td>$endereco</td>";
-                echo "<td>$email</td>";
-                echo "</tr>";
+                    echo "<tr>";
+                    echo "<td>$id</td>";
+                    echo "<td>$nome</td>";
+                    echo "<td>$cpf</td>";
+                    echo "<td>$data</td>";
+                    echo "<td>$telefone</td>";
+                    echo "<td>$data</td>";
+                    echo "<td>$endereco</td>";
+                    echo "<td>$email</td>";
+
+
+                    echo "<//tr>";
+
+                }
+                
             }
         }
-    } else {
+     else {
         echo "Digite um nome para pesquisar.";
     }
     ?>

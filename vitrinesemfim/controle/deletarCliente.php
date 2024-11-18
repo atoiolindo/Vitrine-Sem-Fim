@@ -4,7 +4,7 @@
     $id = $_GET['id'];
     
     // DELETE FROM cliente WHERE idcliente = 3;
-    $sql = "DELETE FROM cliente WHERE cliente = $id;";
+    $sql = "DELETE FROM cliente WHERE idcliente = $id;";
 
     mysqli_query($conexao, $sql);
 
