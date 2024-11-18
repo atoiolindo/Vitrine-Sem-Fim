@@ -30,9 +30,8 @@
         $sql = "SELECT * FROM emprestimo";
 
         $resultados = mysqli_query($conexao, $sql);
-        $i = 0;
         while ($linha = mysqli_fetch_array($resultados)) {
-            $id = $linha['idpagamento'];
+            $id = $linha['idemprestimo'];
             $data = $linha['data_emprestimo'];
             $emprestimo = $linha['data_entrega'];
             $cliente = $linha['cliente_idcliente'];
@@ -41,14 +40,14 @@
 
             echo "<tbody>";
             echo "<tr>";
-            echo "<th scope='row'>$i</th>";
+            echo "<th scope='row'>$id</th>";
             echo "<td>$data</td>";
             echo "<td>$emprestimo</td>";
             echo "<td>$cliente</td>";
             echo "<td>$livro</td>";
             echo "<td>$vendedor</td>";
             echo "<td><a href='../controle/deletarEmprestimo.php?id=$id' class='btn btn-danger'>Apagar</a></td>";
-            echo "<td><a href='formpagamento.php?id=$id'>Editar</a></td>";
+            echo "<td><a href='formemprestimo.php?id=$id'>Editar</a></td>";
             echo "</tr>";
             echo "</tbody>";
         }
