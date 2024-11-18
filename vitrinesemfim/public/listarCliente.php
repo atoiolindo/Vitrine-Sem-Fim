@@ -35,10 +35,10 @@ require_once "../controle/verificaLogado.php";
         $sql = "SELECT * FROM cliente";
 
         $resultados = mysqli_query($conexao, $sql);
-        $i = 0;
+        $id = 0;
 
         while ($linha = mysqli_fetch_array($resultados)) {
-            $i++;
+            $id = $linha['idcliente'];
             $nome = $linha['nome'];
             $cpf = $linha['cpf'];
             $telefone = $linha['telefone'];
@@ -48,7 +48,7 @@ require_once "../controle/verificaLogado.php";
 
             echo "<tbody>";
             echo "<tr>";
-            echo "<th scope= 'row'>$i</th>";
+            echo "<th scope= 'row'>$id</th>";
             echo "<td>$nome</td>";
             echo "<td>$cpf</td>";
             echo "<td>$telefone</td>";
