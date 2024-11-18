@@ -20,8 +20,8 @@ if (isset($_GET['valor'])) {
 
 <body>
     <form action="pesquisarLivro.php" method="get">
-        Nome do Livro: <br>
-        <input type="text" name="valor" value="<?php echo $valor; ?>"> <br> <br>
+        Nome: <br>
+        <input type="text" name="valor" value="<?php echo $valor; ?>"> <br><br>
 
         <input type="submit" value="Enviar">
     </form> <br>
@@ -47,6 +47,7 @@ if (isset($_GET['valor'])) {
             echo "<td>ISBN</td>";
             echo "<td>Estado</td>";
 
+         
             while ($linha = mysqli_fetch_array($resultados)) {
                 $id = $linha['idlivro'];
                 $nome = $linha['nome'];
@@ -54,8 +55,8 @@ if (isset($_GET['valor'])) {
                 $autor_idautor = $linha['autor_idautor'];
                 $isbn = $linha['isbn'];
                 $estado = $linha['estado'];
-               
 
+           
                 echo "<tr>";
                 echo "<td>$id</td>";
                 echo "<td>$nome</td>";
@@ -67,7 +68,7 @@ if (isset($_GET['valor'])) {
                 echo "</tr>";
             }
         }
-     else {
+    } else {
         echo "Digite um nome para pesquisar.";
     }
     ?>
