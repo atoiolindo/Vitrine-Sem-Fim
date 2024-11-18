@@ -14,7 +14,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="pesquisarLivro.php" method="post">
+    <form action="pesquisarLivro.php" method="get">
         Nome do Livro: <br>
         <input type="text" name="valor" value="<?php echo $valor; ?>"> <br> <br>
 
@@ -52,8 +52,8 @@
                     echo "<td>$id</td>";
                     echo "<td>$nome</td>";
                     echo "<td>$genero</td>";
-                    echo "<td>$isbn/td>";
-                    echo "<td>$estado/td>";
+                    echo "<td>$isbn</td>";
+                    echo "<td>$estado</td>";
 
 
                 }

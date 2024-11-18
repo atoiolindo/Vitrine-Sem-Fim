@@ -59,11 +59,11 @@ else {$valor='';}
                     echo "<td>$id</td>";
                     echo "<td>$nome</td>";
                     echo "<td>$cpf</td>";
-                    echo "<td>$data/td>";
-                    echo "<td>$telefone/td>";
-                    echo "<td>$data/td>";
-                    echo "<td>$endereco/td>";
-                    echo "<td>$email/td>";
+                    echo "<td>$data</td>";
+                    echo "<td>$telefone</td>";
+                    echo "<td>$data</td>";
+                    echo "<td>$endereco</td>";
+                    echo "<td>$email</td>";
 
 
 
