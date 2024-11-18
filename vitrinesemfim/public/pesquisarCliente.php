@@ -69,5 +69,6 @@
             echo "Procure um nome";
         } 
     ?>
+     <a href="home.php" class="btn btn-secondary float-start">Voltar para Início</a>
 </body>
 </html>
