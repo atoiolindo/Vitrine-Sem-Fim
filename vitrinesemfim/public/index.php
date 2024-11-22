@@ -15,7 +15,7 @@ if (isset($_SESSION['logado'])) {
       href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/indexx.css" />
+    <link rel="stylesheet" href="./css/index.css" />
     <title>Livraria | Vitrine sem Fim</title>
   </head>
   <body>
@@ -26,7 +26,7 @@ if (isset($_SESSION['logado'])) {
         </div>
 
         <div class="login">
-            <a href="index.php">
+            <a href="login.php">
                <span><i class="ri-user-3-fill"></i></span>
                Log In
             </a>

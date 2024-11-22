@@ -27,7 +27,7 @@
             </li>
         
             <li class="itemmenu">
-                <a href="#">
+                <a href="pagecadastro.php">
                     <span class= "icon"> <i class="bi bi-journal-text"> </i> </span>
                     <span class= "txtlink"> Cadastro </span>
                 </a>
@@ -47,8 +47,6 @@
             </li>
         </ul>
     </nav>
-
-    <script src="menu.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,90 @@
+/* Estilos gerais */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo do container */
+.cadastro-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Título */
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #FF0077;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Caixa de cadastro */
+.cadastro-box {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+}
+
+legend {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FF0077;
+    margin-bottom: 20px;
+}
+
+/* Botões de cadastro */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.btn-cadastro {
+    display: inline-block;
+    width: 100%;
+    padding: 15px;
+    background-color: #FF0077;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-cadastro:hover {
+    background-color: #e60064;
+    transform: translateY(-3px);
+}
+
+/* Efeitos de Hover */
+.btn-cadastro:focus,
+.btn-cadastro:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .cadastro-container {
+        padding: 15px;
+    }
+
+    .btn-cadastro {
+        padding: 12px;
+        font-size: 1rem;
+    }
+}

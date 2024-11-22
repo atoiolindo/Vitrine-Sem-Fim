@@ -1,0 +1,113 @@
+/* Importando fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1f2025, #24292f); /* Fundo degradê suave */
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #333;
+}
+
+.input-group {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.input-box {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.input-box label {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0.3rem;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.input-box input:focus {
+    outline: none;
+    border-color: #ff0077; /* Cor de foco para o campo */
+}
+
+.actions {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #ff0077; /* Cor rosa vibrante */
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #e6006b; /* Cor mais escura no hover */
+}
+
+.forgot-password {
+    font-size: 0.85rem;
+    color: #ff0077;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.forgot-password:hover {
+    color: #e6006b; /* Cor mais escura no hover */
+}
+
+/* Responsividade para dispositivos móveis */
+@media screen and (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+}

@@ -283,3 +283,12 @@ nav {
   }
 }
 
+.login a {
+  color: #f7f7f7; /* Cor preta */
+  text-decoration: none; /* Remover o sublinhado */
+}
+
+.login a:hover {
+  color: #555555; /* Cor ao passar o mouse (opcional) */
+}
+

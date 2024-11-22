@@ -11,7 +11,7 @@ if (mysqli_num_rows($resultados) == 0) {
     // usuário não cadastrado
     // ou informou dados errados.
     header("Location: ../public/index.php");
-    // echo "sem resultados";
+    // echo "sem re sultados";
 } else {
     // pode acessar.
     session_start();
