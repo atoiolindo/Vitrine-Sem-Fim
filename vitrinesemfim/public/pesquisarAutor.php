@@ -15,13 +15,14 @@ if (isset($_GET['valor'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/pesquisar.css">
     <title>Document</title>
 </head>
 
 <body>
-    <form action="pesquisarAutor.php" method="get">
+    <form action=" pesquisarAutor.php" method="get">
         Nome: <br>
-        <input type="text" name="valor" value="<?php echo $valor; ?>"> <br><br>
+        <input class="searchbar" type="text" name="valor" value="<?php echo $valor; ?>" placeholder="Pesquise um autor..."> <br><br>
 
         <input type="submit" value="Enviar">
     </form> <br>
@@ -34,7 +35,7 @@ if (isset($_GET['valor'])) {
         require_once "../controle/conexao.php";
         $sql = "SELECT * FROM autor WHERE nome LIKE '%$valor%'";
         $resultados = mysqli_query($conexao, $sql);
-
+        
         if (mysqli_num_rows($resultados) == 0) {
             echo "Não foram encontrados resultados.";
         } else {
