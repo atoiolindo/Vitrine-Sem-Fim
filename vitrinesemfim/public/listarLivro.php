@@ -49,7 +49,7 @@ require_once "../controle/verificaLogado.php";
             echo "<td>$idautor</td>";
             echo "<td>$isbn</td>";
             echo "<td>$estado</td>";
-            echo "<td><a href='../controle/deletarLivro.php?id='$id' class='btn btn-danger'>Apagar</a></td>";
+            echo "<td><a href='../controle/deletarLivro.php?id=$id' class='btn btn-danger'>Apagar</a></td>";
             echo "<td><a href='formlivro.php?id=$id'>Editar</a></td>";
             echo "</tr>";
             echo "</tbody>";
