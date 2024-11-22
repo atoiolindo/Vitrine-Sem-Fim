@@ -33,13 +33,13 @@
                 </a>
             </li>  
             <li class="itemmenu">
-                <a href="#">
+                <a href="pagelista.php">
                     <span class= "icon"> <i class="bi bi-person-lines-fill"> </i> </span>
                     <span class= "txtlink"> Listagem </span>
                 </a>
              </li>  
              <li class="itemmenu">
-                <a href="#">
+                <a href="pagepesquisar.php">
                     <span class= "icon"> <i class="bi bi-search"> </i> </span>
                     <span class= "txtlink"> Pesquisar </span>
 
