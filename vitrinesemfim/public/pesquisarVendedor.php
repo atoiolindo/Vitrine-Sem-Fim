@@ -47,7 +47,7 @@ if (isset($_GET['valor'])) {
             echo "<td>Data_Nascimento</td>";
             echo "<td>Endereço</td>";
             echo "<td>Email</td>";
-            
+
             while ($linha = mysqli_fetch_array($resultados)) {
                 $id = $linha['idvendedor'];
                 $nome = $linha['nome'];
@@ -57,27 +57,25 @@ if (isset($_GET['valor'])) {
                 $endereco = $linha['endereco'];
                 $email = $linha['email'];
 
-                    echo "<tr>";
-                    echo "<td>$id</td>";
-                    echo "<td>$nome</td>";
-                    echo "<td>$cpf</td>";
-                    echo "<td>$data</td>";
-                    echo "<td>$telefone</td>";
-                    echo "<td>$data</td>";
-                    echo "<td>$endereco</td>";
-                    echo "<td>$email</td>";
+                echo "<tr>";
+                echo "<td>$id</td>";
+                echo "<td>$nome</td>";
+                echo "<td>$cpf</td>";
+                echo "<td>$data</td>";
+                echo "<td>$telefone</td>";
+                echo "<td>$data</td>";
+                echo "<td>$endereco</td>";
+                echo "<td>$email</td>";
 
 
-                    echo "<//tr>";
-
-                }
-                
+                echo "<//tr>";
             }
         }
-     else {
+    } else {
         echo "Digite um nome para pesquisar.";
     }
     ?>
+    <a href="home.php" class="btn btn-secondary float-start">Voltar para Início</a>
 </body>
 
 </html>
