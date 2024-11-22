@@ -43,7 +43,7 @@ if (isset($_GET['valor'])) {
             echo "<td>ID</td>";
             echo "<td>Nome</td>";
             echo "<td>Genero</td>";
-            echo "<td>IdAutor</td>";
+            echo "<td>Autor</td>";
             echo "<td>ISBN</td>";
             echo "<td>Estado</td>";
 
