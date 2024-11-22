@@ -37,16 +37,23 @@ require_once "../controle/verificaLogado.php";
             $id = $linha['idlivro'];
             $nome = $linha['nome'];
             $genero = $linha['genero'];
-            $idautor = $linha['autor_idautor'];
+            $autor = $linha['autor_idautor'];
             $isbn = $linha['isbn'];
             $estado = $linha['estado'];
+
+            // SELECT nome FROM autor WHERE idpaciente = 1;
+            $autor = $linha['autor_idautor'];
+            $sql2 = "SELECT nome FROM autor WHERE idautor = $autor";
+            $resultados2 = mysqli_query($conexao, $sql2);
+            $linha2 = mysqli_fetch_array($resultados2);
+            $autor_nome = $linha2['nome'];
 
             echo "<tbody>";
             echo "<tr>";
             echo "<th scope='row'>$id</th>";
             echo "<td>$nome</td>";
             echo "<td>$genero</td>";
-            echo "<td>$idautor</td>";
+            echo "<td>$autor_nome</td>";
             echo "<td>$isbn</td>";
             echo "<td>$estado</td>";
             echo "<td><a href='../controle/deletarLivro.php?id=$id' class='btn btn-danger'>Apagar</a></td>";
