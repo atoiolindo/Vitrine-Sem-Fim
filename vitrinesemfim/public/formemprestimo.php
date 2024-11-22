@@ -152,7 +152,6 @@ if (isset($_GET['id'])) {
             <input type="submit" value="<?php echo $botao; ?>" class="btn btn-secondary mt-3">
         </div>
     </form>
-    <a href="home.php" class="btn btn-secondary float-start">Voltar para Início</a>
 
 </body>
 
