@@ -31,7 +31,7 @@ require_once "../controle/verificaLogado.php";
         require_once "../controle/conexao.php";
 
         $sql = "SELECT * FROM livro";
-
+        $id = 0;
         $resultados = mysqli_query($conexao, $sql);
         while ($linha = mysqli_fetch_array($resultados)) {
             $id = $linha['idlivro'];
@@ -49,7 +49,7 @@ require_once "../controle/verificaLogado.php";
             echo "<td>$idautor</td>";
             echo "<td>$isbn</td>";
             echo "<td>$estado</td>";
-            echo "<td><a href='..controle/deletarLivro.php?id='$id' class='btn btn-danger'>Apagar</a></td>";
+            echo "<td><a href='../controle/deletarLivro.php?id='$id' class='btn btn-danger'>Apagar</a></td>";
             echo "<td><a href='formlivro.php?id=$id'>Editar</a></td>";
             echo "</tr>";
             echo "</tbody>";
