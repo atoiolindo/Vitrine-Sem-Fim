@@ -10,7 +10,7 @@ require_once "../controle/verificaLogado.php"; // Inclui o arquivo que verifica 
       href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
       rel="stylesheet" /> <!-- Link para a biblioteca de ícones RemixIcon -->
     <link rel="stylesheet" href="./css/home.css" /> <!-- Link para o arquivo CSS da página -->
-    <title>Web Design Mastery | Porsche</title> <!-- Define o título da página -->
+    <title>Página Inicial</title> <!-- Define o título da página -->
   </head>
   <body>
     <?php require_once 'menu.php';  // Inclui o menu lateral da página ?>
