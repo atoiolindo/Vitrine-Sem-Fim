@@ -43,13 +43,24 @@ require_once "../controle/verificaLogado.php";
             $idemprestimo = $linha['emprestimo_idemprestimo'];
             $pago = $linha['valor_pago'];
 
+
+             // SELECT nome FROM vendedor WHERE idvendedor = 1;
+             $vendedor = $linha['vendedor_idvendedor'];
+             $sql2 = "SELECT nome FROM vendedor WHERE idvendedor = $vendedor";
+             $resultados2 = mysqli_query($conexao, $sql2);
+             $linha2 = mysqli_fetch_array($resultados2);
+             $vendedor_nome = $linha2['nome'];
+ 
+            
+
+
             echo "<tbody>";
             echo "<tr>";
             echo "<th scope='row'>$id</th>";
             echo "<td>$atraso</td>";
             echo "<td>$multa</td>";
             echo "<td>$final</td>";
-            echo "<td>$idvendedor</td>";
+            echo "<td>$vendedor_nome</td>";
             echo "<td>$idemprestimo</td>";
             echo "<td>$pago</td>";
             echo "<td><a href='../controle/deletarPagamento.php?id=$id' class='btn btn-danger'>Apagar</a></td>";
