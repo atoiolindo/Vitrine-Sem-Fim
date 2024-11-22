@@ -35,7 +35,7 @@ if (isset($_GET['valor'])) {
         require_once "../controle/conexao.php";
         $sql = "SELECT * FROM autor WHERE nome LIKE '%$valor%'";
         $resultados = mysqli_query($conexao, $sql);
-        
+
         if (mysqli_num_rows($resultados) == 0) {
             echo "Não foram encontrados resultados.";
         } else {
@@ -62,7 +62,6 @@ if (isset($_GET['valor'])) {
         echo "Digite um nome para pesquisar.";
     }
     ?>
-    <a href="home.php" class="btn btn-secondary float-start">Voltar para Início</a>
 </body>
 
 </html>

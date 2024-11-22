@@ -15,13 +15,14 @@ if (isset($_GET['valor'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/pesquisar.css">
     <title>Document</title>
 </head>
 
 <body>
     <form action="pesquisarCliente.php" method="get">
         Nome: <br>
-        <input type="text" name="valor" value="<?php echo $valor; ?>"> <br><br>
+        <input class="searchbar" type="text" name="valor" value="<?php echo $valor; ?>"> <br><br>
 
         <input type="submit" value="Enviar">
     </form> <br>
@@ -71,7 +72,7 @@ if (isset($_GET['valor'])) {
         echo "Digite um nome para pesquisar.";
     }
     ?>
-    <a href="home.php" class="btn btn-secondary float-start">Voltar para Início</a>
+
 </body>
 
 </html>

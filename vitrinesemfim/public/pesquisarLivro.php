@@ -15,13 +15,14 @@ if (isset($_GET['valor'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/pesquisar.css">
     <title>Document</title>
 </head>
 
 <body>
     <form action="pesquisarLivro.php" method="get">
         Nome: <br>
-        <input type="text" name="valor" value="<?php echo $valor; ?>"> <br><br>
+        <input class="searchbar" type="text" name="valor" value="<?php echo $valor; ?>"> <br><br>
 
         <input type="submit" value="Enviar">
     </form> <br>
@@ -52,18 +53,18 @@ if (isset($_GET['valor'])) {
                 $id = $linha['idlivro'];
                 $nome = $linha['nome'];
                 $genero = $linha['genero'];
-                $autor= $linha['autor_idautor'];
+                $autor = $linha['autor_idautor'];
                 $isbn = $linha['isbn'];
                 $estado = $linha['estado'];
 
-             
-        
-            // SELECT nome FROM autor WHERE idpaciente = 1;
-            $autor = $linha['autor_idautor'];
-            $sql2 = "SELECT nome FROM autor WHERE idautor = $autor";
-            $resultados2 = mysqli_query($conexao, $sql2);
-            $linha2 = mysqli_fetch_array($resultados2);
-            $autor_nome = $linha2['nome'];
+
+
+                // SELECT nome FROM autor WHERE idpaciente = 1;
+                $autor = $linha['autor_idautor'];
+                $sql2 = "SELECT nome FROM autor WHERE idautor = $autor";
+                $resultados2 = mysqli_query($conexao, $sql2);
+                $linha2 = mysqli_fetch_array($resultados2);
+                $autor_nome = $linha2['nome'];
 
 
 
@@ -82,7 +83,7 @@ if (isset($_GET['valor'])) {
         echo "Digite um nome para pesquisar.";
     }
     ?>
-    <a href="home.php" class="btn btn-secondary float-start">Voltar para Início</a>
+
 </body>
 
 </html>

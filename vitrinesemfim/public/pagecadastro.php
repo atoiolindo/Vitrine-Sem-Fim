@@ -47,7 +47,6 @@ require_once "../controle/verificaLogado.php"; // Verifica se o usuário está l
     </div>
 
     <script src="menu.js"></script>
-    <a href="home.php" class="btn btn-secondary float-start">Voltar para Início</a>
 </body>
 
 </html>

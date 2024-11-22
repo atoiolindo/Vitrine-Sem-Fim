@@ -19,25 +19,8 @@ body {
     outline: none;
 }
 
-#list {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 10px;
-}
-
-
-#output {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-}
-
 @media screen and (max-width: 768px) {
     #searchbar {
         width: 60vw;
-    }
-
-    .animals {
-        width: 35vw;
     }
 }
