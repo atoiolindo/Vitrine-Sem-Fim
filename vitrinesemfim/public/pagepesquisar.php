@@ -25,13 +25,13 @@ require_once "../controle/verificaLogado.php"; // Verifica se o usuário está l
             <fieldset>
                 <legend>Cadastro de Itens</legend>
                 <div class="form-group">
-                    <a href="clienteform.php" class="btn btn-cadastro">Pesquisar Cliente</a>
+                    <a href="pesquisarCliente.php" class="btn btn-cadastro">Pesquisar Cliente</a>
                 </div>
                 <div class="form-group">
-                    <a href="autorform.php" class="btn btn-cadastro">Pesquisar Autor</a>
+                    <a href="pesquisarAutor.php" class="btn btn-cadastro">Pesquisar Autor</a>
                 </div>
                 <div class="form-group">
-                    <a href="form_vendedor.php" class="btn btn-cadastro">Pesquisar Vendedor</a>
+                    <a href="pesquisarVendedor.php" class="btn btn-cadastro">Pesquisar Vendedor</a>
                 </div>
                 <div class="form-group">
                     <a href="pesquisarLivro.php" class="btn btn-cadastro">Pesquisar Livro</a>
