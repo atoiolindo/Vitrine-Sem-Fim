@@ -11,33 +11,31 @@ require_once "../controle/verificaLogado.php";
       href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./css/home.css" />
     <title>Web Design Mastery | Porsche</title>
   </head>
   <body>
+        <?php require_once 'menu.php';  // Inclui o menu lateral
+    ?>
+    
     <div class="container">
       <nav>
         <ul class="nav__links nav__left">
-          <li><a href="#" class="logo">Diesel</a></li>
-          <li><a href="#">Store</a></li>
-          <li><a href="#">Shop</a></li>
-          <li><a href="#">Collection</a></li>
+          <li><a href="#" class="logo">Vitrine sem Fim</a></li>
         </ul>
+
         <ul class="nav__links nav__right">
-          <li><a href="#">Cart</a></li>
-          <li><a href="#">Login/Register</a></li>
-          <li><a href="#">Profile</a></li>
+          <li><a href="#">Deslogar</a></li>
         </ul>
       </nav>
+
       <span class="letter-s">S</span>
       <img src="assets/header.png" alt="header" />
-      <h4 class="text__left">POR</h4>
-      <h4 class="text__right">CHE</h4>
-      <button class="btn explore">EXPLORE MORE</button>
-      <button class="btn print">PRINT</button>
-      <button class="btn catalog">CATALOG</button>
-      <h5 class="feature-1">Diesel</h5>
-      <h5 class="feature-2">Watches</h5>
+      <h4 class="text__left">SEM</h4>
+      <h4 class="text__right">FIM</h4>
+ 
+      <h5 class="feature-1">Literatura</h5>
+      <h5 class="feature-2">Romance</h5>
       <h5 class="feature-3">Tough</h5>
       <h5 class="feature-4">Modern</h5>
       <footer class="footer">
