@@ -1,10 +1,9 @@
 <?php
-require_once "../controle/verificaLogado.php"; // Inclui o arquivo que verifica se o usuário está logado
+require_once "../controle/verificaLogado.php"; 
 ?>
 <!DOCTYPE html>
-<html lang="en"> <!-- Define o idioma da página como inglês -->
   <head>
-    <meta charset="UTF-8" /> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta charset="UTF-8" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Torna a página responsiva em dispositivos móveis -->
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
@@ -22,7 +21,7 @@ require_once "../controle/verificaLogado.php"; // Inclui o arquivo que verifica 
         </ul>
 
         <ul class="nav__links nav__right"> <!-- Lista de links à direita -->
-          <li><a href="#">Deslogar</a></li> <!-- Link para deslogar o usuário, não direciona para nenhum lugar -->
+          <li><a href="deslogar.html">Deslogar</a></li> <!-- Link para deslogar o usuário, não direciona para nenhum lugar -->
         </ul>
       </nav>
 
