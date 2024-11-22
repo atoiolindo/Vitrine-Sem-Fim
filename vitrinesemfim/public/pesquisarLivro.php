@@ -22,7 +22,7 @@ if (isset($_GET['valor'])) {
 <body>
     <form action="pesquisarLivro.php" method="get">
         Nome: <br>
-        <input class="searchbar" type="text" name="valor" value="<?php echo $valor; ?>"> <br><br>
+        <input placeholder="Pesquise um livro..." class="searchbar" type="text" name="valor" value="<?php echo $valor; ?>"> <br><br>
 
         <input type="submit" value="Enviar">
     </form> <br>
