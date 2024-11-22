@@ -19,7 +19,7 @@ require_once "../controle/verificaLogado.php"; // Verifica se o usuário está l
     ?>
 
     <div class="container cadastro-container">
-        <h2 class="text-center text-uppercase"><i><b>Cadastro</b></i></h2>
+        <h2 class="text-center text-uppercase"><i><b>Listas</b></i></h2>
 
         <div class="cadastro-box">
             <fieldset>
