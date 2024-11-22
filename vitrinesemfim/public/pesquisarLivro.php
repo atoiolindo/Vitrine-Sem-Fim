@@ -43,7 +43,7 @@ if (isset($_GET['valor'])) {
             echo "<td>ID</td>";
             echo "<td>Nome</td>";
             echo "<td>Genero</td>";
-            echo "<td>IdAutor</td>";
+            echo "<td>Autor</td>";
             echo "<td>ISBN</td>";
             echo "<td>Estado</td>";
 
@@ -52,16 +52,26 @@ if (isset($_GET['valor'])) {
                 $id = $linha['idlivro'];
                 $nome = $linha['nome'];
                 $genero = $linha['genero'];
-                $autor_idautor = $linha['autor_idautor'];
+                $autor= $linha['autor_idautor'];
                 $isbn = $linha['isbn'];
                 $estado = $linha['estado'];
+
+             
+        
+            // SELECT nome FROM autor WHERE idpaciente = 1;
+            $autor = $linha['autor_idautor'];
+            $sql2 = "SELECT nome FROM autor WHERE idautor = $autor";
+            $resultados2 = mysqli_query($conexao, $sql2);
+            $linha2 = mysqli_fetch_array($resultados2);
+            $autor_nome = $linha2['nome'];
+
 
 
                 echo "<tr>";
                 echo "<td>$id</td>";
                 echo "<td>$nome</td>";
                 echo "<td>$genero</td>";
-                echo "<td>$autor_idautor</td>";
+                echo "<td>$autor_nome</td>";
                 echo "<td>$isbn</td>";
                 echo "<td>$estado</td>";
 
