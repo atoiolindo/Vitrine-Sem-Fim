@@ -10,7 +10,7 @@ require_once "../controle/verificaLogado.php"; // Verifica se o usuário está l
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/bootstrap.css"> <!-- Link para o CSS do Bootstrap -->
     <link rel="stylesheet" href="./css/pagecadastro.css"> <!-- Seu arquivo de estilo customizado -->
-    <title>Cadastro - Vitrine sem fim</title>
+    <title>Pesquisar - Vitrine sem fim</title>
 </head>
 
 <body>
@@ -19,11 +19,11 @@ require_once "../controle/verificaLogado.php"; // Verifica se o usuário está l
     ?>
 
     <div class="container cadastro-container">
-        <h2 class="text-center text-uppercase"><i><b>Cadastro</b></i></h2>
+        <h2 class="text-center text-uppercase"><i><b>Pesquisa</b></i></h2>
 
         <div class="cadastro-box">
             <fieldset>
-                <legend>Cadastro de Itens</legend>
+                <legend>Pesquisa de Itens</legend>
                 <div class="form-group">
                     <a href="pesquisarCliente.php" class="btn btn-cadastro">Pesquisar Cliente</a>
                 </div>
@@ -41,6 +41,7 @@ require_once "../controle/verificaLogado.php"; // Verifica se o usuário está l
     </div>
 
     <script src="menu.js"></script>
+    <a href="home.php" class="btn btn-secondary float-start">Voltar para Início</a>
 </body>
 
 </html>

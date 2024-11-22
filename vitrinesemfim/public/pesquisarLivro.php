@@ -47,7 +47,7 @@ if (isset($_GET['valor'])) {
             echo "<td>ISBN</td>";
             echo "<td>Estado</td>";
 
-         
+
             while ($linha = mysqli_fetch_array($resultados)) {
                 $id = $linha['idlivro'];
                 $nome = $linha['nome'];
@@ -56,7 +56,7 @@ if (isset($_GET['valor'])) {
                 $isbn = $linha['isbn'];
                 $estado = $linha['estado'];
 
-           
+
                 echo "<tr>";
                 echo "<td>$id</td>";
                 echo "<td>$nome</td>";
@@ -64,7 +64,7 @@ if (isset($_GET['valor'])) {
                 echo "<td>$autor_idautor</td>";
                 echo "<td>$isbn</td>";
                 echo "<td>$estado</td>";
-                
+
                 echo "</tr>";
             }
         }
@@ -72,6 +72,7 @@ if (isset($_GET['valor'])) {
         echo "Digite um nome para pesquisar.";
     }
     ?>
+    <a href="home.php" class="btn btn-secondary float-start">Voltar para Início</a>
 </body>
 
 </html>

@@ -71,6 +71,7 @@ if (isset($_GET['valor'])) {
         echo "Digite um nome para pesquisar.";
     }
     ?>
+    <a href="home.php" class="btn btn-secondary float-start">Voltar para Início</a>
 </body>
 
 </html>
