@@ -34,12 +34,6 @@ require_once "../controle/verificaLogado.php"; // Verifica se o usuário está l
                     <a href="form_vendedor.php" class="btn btn-cadastro">Pesquisar Vendedor</a>
                 </div>
                 <div class="form-group">
-                    <a href="pesquisar.php" class="btn btn-cadastro">Pesquisar Pagamento</a>
-                </div>
-                <div class="form-group">
-                    <a href="pesquisar.php" class="btn btn-cadastro">Pesquisar Empréstimo</a>
-                </div>
-                <div class="form-group">
                     <a href="pesquisarLivro.php" class="btn btn-cadastro">Pesquisar Livro</a>
                 </div>
             </fieldset>
