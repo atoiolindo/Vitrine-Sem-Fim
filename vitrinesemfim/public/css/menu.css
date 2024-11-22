@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap');
 
-
 .btnexpandir {
     text-align: left;
     margin-left: 1%;
@@ -9,11 +8,11 @@
 }
 
 #menu {
-    text-align: left
+    text-align: left;
 }
 
-nav.menulateral{
-    width:300px;
+nav.menulateral {
+    width: 50px; /* Tamanho inicial do menu */
     height: 100%;
     background-color: #202020;
     padding: 40px 0 40 px 1%;
@@ -22,13 +21,14 @@ nav.menulateral{
     top: 0;
     left: 0;
     overflow: hidden;
+    transition: width 0.3s ease; /* Transição suave para a expansão */
 }
 
-nav.menulateral:hover{
-    width: 300px
+nav.menulateral:hover {
+    width: 300px; /* Largura do menu quando o mouse passa por cima */
 }
 
-.btnexpandir{
+.btnexpandir {
     width: 100%;
     padding-left: 10px;
 }
@@ -39,38 +39,41 @@ nav.menulateral:hover{
     cursor: pointer;
 }
 
-.ulmenu{
-    height:100%;
+.ulmenu {
+    height: 100%;
     list-style-type: none;
 }
 
-ul li.itemmenu{
-    transition: .2s
+ul li.itemmenu {
+    transition: .2s;
 }
 
-ul li.ativo{
+ul li.ativo {
     background-color: #FF0077;
 }
 
-ul li.itemmenu:hover{
+ul li.itemmenu:hover {
     background: #FF0077;
 }
 
-ul li.itemmenu a{
+ul li.itemmenu a {
     color: #fff;
     text-decoration: none;
     font-size: 20px;
     padding: 20px 4%;
     display: flex;
-
     margin-bottom: 20px;
     line-height: 40px;
 }
 
-ul li.itemmenu a .txtlink{
+ul li.itemmenu a .txtlink {
     margin-left: 40px;
 }
 
-ul li.itemmenu a .icon > i{
+ul li.itemmenu a .icon > i {
     font-size: 30px;
+}
+
+#casa {
+    margin-top: 30px;
 }

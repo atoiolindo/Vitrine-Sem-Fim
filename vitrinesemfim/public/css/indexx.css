@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
 
 :root {
-  --primary-color: #00605f;
-  --secondary-color: #017479;
+  --primary-color: #ff0055;
+  --secondary-color: #ff0071;
   --text-dark: #0f172a;
   --text-light: #94a3b8;
   --white: #ffffff;
@@ -19,10 +19,10 @@ body {
   font-family: "Montserrat", sans-serif;
   background: linear-gradient(
       to right,
-      rgba(2, 82, 89, 0.9),
-      rgba(255, 255, 255, 0)
+      rgb(35, 39, 39),
+      rgba(32, 32, 32, 0.397)
     ),
-    url("assets/bg.jpg");
+    url("assets/bg.png");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
