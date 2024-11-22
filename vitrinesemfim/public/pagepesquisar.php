@@ -10,7 +10,7 @@ require_once "../controle/verificaLogado.php"; // Verifica se o usuário está l
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/bootstrap.css"> <!-- Link para o CSS do Bootstrap -->
     <link rel="stylesheet" href="./css/pagecadastro.css"> <!-- Seu arquivo de estilo customizado -->
-    <title>Cadastro - Vitrine sem fim</title>
+    <title>Pesquisar - Vitrine sem fim</title>
 </head>
 
 <body>
@@ -19,25 +19,19 @@ require_once "../controle/verificaLogado.php"; // Verifica se o usuário está l
     ?>
 
     <div class="container cadastro-container">
-        <h2 class="text-center text-uppercase"><i><b>Cadastro</b></i></h2>
+        <h2 class="text-center text-uppercase"><i><b>Pesquisa</b></i></h2>
 
         <div class="cadastro-box">
             <fieldset>
-                <legend>Cadastro de Itens</legend>
+                <legend>Pesquisa de Itens</legend>
                 <div class="form-group">
-                    <a href="clienteform.php" class="btn btn-cadastro">Pesquisar Cliente</a>
+                    <a href="pesquisarCliente.php" class="btn btn-cadastro">Pesquisar Cliente</a>
                 </div>
                 <div class="form-group">
-                    <a href="autorform.php" class="btn btn-cadastro">Pesquisar Autor</a>
+                    <a href="pesquisarAutor.php" class="btn btn-cadastro">Pesquisar Autor</a>
                 </div>
                 <div class="form-group">
-                    <a href="form_vendedor.php" class="btn btn-cadastro">Pesquisar Vendedor</a>
-                </div>
-                <div class="form-group">
-                    <a href="pesquisar.php" class="btn btn-cadastro">Pesquisar Pagamento</a>
-                </div>
-                <div class="form-group">
-                    <a href="pesquisar.php" class="btn btn-cadastro">Pesquisar Empréstimo</a>
+                    <a href="pesquisarVendedor.php" class="btn btn-cadastro">Pesquisar Vendedor</a>
                 </div>
                 <div class="form-group">
                     <a href="pesquisarLivro.php" class="btn btn-cadastro">Pesquisar Livro</a>
@@ -47,6 +41,7 @@ require_once "../controle/verificaLogado.php"; // Verifica se o usuário está l
     </div>
 
     <script src="menu.js"></script>
+    <a href="home.php" class="btn btn-secondary float-start">Voltar para Início</a>
 </body>
 
 </html>

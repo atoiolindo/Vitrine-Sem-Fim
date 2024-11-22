@@ -82,6 +82,7 @@ if (isset($_GET['id'])) {
         </div>
 
     </form>
+    <a href="home.php" class="btn btn-secondary float-start">Voltar para Início</a>
 
 </body>
 
