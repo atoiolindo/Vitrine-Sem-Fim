@@ -4,7 +4,7 @@ if (isset($_GET['id'])) {
     require_once "../controle/conexao.php";
 
     $id = $_GET['id'];
-    $sql = "SELECT * FROM vendedor WHERE idvendendor = $id";
+    $sql = "SELECT * FROM vendedor WHERE idvendedor = $id";
     $resultado = mysqli_query($conexao, $sql);
 
     $linha = mysqli_fetch_array($resultado);
@@ -52,30 +52,30 @@ if (isset($_GET['id'])) {
         <div class="container">
             <div>
                 <label for="nome" class="form-label">Nome</label>
-                <input type="text" name="nome" required class="form-control" id="nome">
+                <input type="text" name="nome" required class="form-control" value="<?php echo $nome; ?>" id="nome">
             </div>
 
             <div>
                 <label for="cpf" class="form-label">CPF</label>
-                <input type="text" name="cpf" class="form-control" id="cpf">
+                <input type="text" name="cpf" class="form-control" value="<?php echo $cpf; ?>" id="cpf">
             </div>
             <div>
                 <label for="telefone" class="form-label">Telefone</label>
-                <input type="text" name="telefone" class="form-control" id="telefone">
+                <input type="text" name="telefone" class="form-control" value="<?php echo $telefone; ?>" id="telefone">
             </div>
 
             <div>
                 <label for="nascimento" class="form-label">Data de nascimento</label>
-                <input type="date" name="nascimento" class="form-control" id="nascimento">
+                <input type="date" name="nascimento" class="form-control" value="<?php echo $data_nascimento; ?>" id="nascimento">
             </div>
 
             <div>
                 <label for="endereço" class="form-label">Endereço</label>
-                <input type="text" name="endereço" class="form-control" id="endereço">
+                <input type="text" name="endereço" class="form-control" value="<?php echo $endereco; ?>" id="endereço">
             </div>
             <div>
                 <label for="email" class="form-label">Email</label>
-                <input type="text" name="email" class="form-control" id="email">
+                <input type="text" name="email" class="form-control" value="<?php echo $email; ?>" id="email">
             </div>
 
             <input type="submit" value="<?php echo $botao; ?>" class="btn btn-secondary mt-3">
