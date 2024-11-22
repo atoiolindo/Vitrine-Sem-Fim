@@ -41,7 +41,7 @@ if (isset($_GET['id'])) {
 </head>
 
 <body class="cadas">
-    
+
     <form action="../controle/salvarAutor.php?id=<?php echo $id; ?>" method="post">
 
         <h3>Autor</h3> <br>
@@ -49,17 +49,17 @@ if (isset($_GET['id'])) {
 
             <div>
                 <label for="nome" class="form-label">Nome</label>
-                <input type="text" name="nome" required class="form-control" id="nome">
+                <input type="text" name="nome" required class="form-control" value="<?php echo $nome; ?>" id="nome">
             </div>
 
             <div>
                 <label for="nacionalidade" class="form-label">Nacionalidade</label>
-                <input type="text" name="nacionalidade" class="form-control" id="nacionalidade">
+                <input type="text" name="nacionalidade" class="form-control" value="<?php echo $nacionalidade; ?>" id="nacionalidade">
             </div>
 
             <div>
                 <label for="biografia" class="form-label">Biografia</label>
-                <input type="text" name="biografia" class="form-control" id="biografia">
+                <input type="text" name="biografia" class="form-control" value="<?php echo $biografia; ?>" id="biografia">
             </div>
 
 
