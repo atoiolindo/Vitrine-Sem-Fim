@@ -1,0 +1,89 @@
+/* Resetando alguns estilos padrão do navegador */
+* {
+    margin: 0; /* Remove a margem padrão de todos os elementos */
+    padding: 0; /* Remove o preenchimento (padding) padrão de todos os elementos */
+    box-sizing: border-box; /* Faz com que o padding e a borda de um elemento não aumentem seu tamanho total */
+}
+
+body {
+    font-family: 'Outfit', sans-serif; /* Define a fonte para o corpo da página. 'Outfit' é uma fonte moderna e sans-serif. */
+    background-color: #f4f4f4; /* Define a cor de fundo da página. Um tom de cinza claro */
+    display: flex; /* Usa o modelo de layout Flexbox para o corpo */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente dentro do body */
+    align-items: center; /* Centraliza o conteúdo verticalmente dentro do body */
+    height: 100vh; /* Define a altura do body para 100% da altura da tela */
+    margin: 0; /* Remove a margem padrão do body */
+}
+
+/* Container principal da página */
+.container {
+    background-color: #fff; /* Define a cor de fundo do container como branco */
+    padding: 30px 50px; /* Define o preenchimento interno do container. 30px acima e abaixo, 50px nas laterais */
+    border-radius: 10px; /* Adiciona bordas arredondadas ao container com um raio de 10px */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Cria uma sombra ao redor do container, fazendo com que pareça "flutuar" */
+    text-align: center; /* Centraliza o texto dentro do container */
+    max-width: 400px; /* Define a largura máxima do container como 400px */
+    width: 100%; /* Garante que o container ocupe toda a largura disponível (até o máximo de 400px) */
+}
+
+/* Estilo do título */
+h1 {
+    font-size: 24px; /* Define o tamanho da fonte do título h1 como 24px */
+    color: #333; /* Define a cor do texto como um tom de cinza escuro */
+    margin-bottom: 15px; /* Adiciona um espaço de 15px abaixo do título */
+}
+
+/* Estilo do texto */
+p {
+    font-size: 16px; /* Define o tamanho da fonte do parágrafo como 16px */
+    color: #666; /* Define a cor do texto como um tom de cinza claro */
+    margin-bottom: 30px; /* Adiciona um espaço de 30px abaixo do parágrafo */
+}
+
+/* Estilo para os botões */
+.actions {
+    display: flex; /* Usa o modelo de layout Flexbox para organizar os botões */
+    justify-content: space-between; /* Distribui os botões de forma espaçada */
+    gap: 20px; /* Adiciona um espaço de 20px entre os botões */
+}
+
+.btn {
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    padding: 12px 25px; /* Adiciona 12px de preenchimento nas laterais e 25px de preenchimento nas extremidades dos botões */
+    border-radius: 5px; /* Adiciona bordas arredondadas aos botões */
+    font-size: 16px; /* Define o tamanho da fonte dos botões como 16px */
+    cursor: pointer; /* Muda o cursor para uma mãozinha quando o mouse passar sobre o botão, indicando que é clicável */
+    text-align: center; /* Centraliza o texto dentro do botão */
+    transition: all 0.3s ease; /* Adiciona uma transição suave para todos os efeitos (ex: mudança de cor, tamanho) que acontecem ao interagir com o botão */
+}
+
+/* Estilo para o botão primário */
+.btn-primary {
+    background-color: #FF0077; /* Define o fundo do botão primário como uma cor rosa forte */
+    color: white; /* Define a cor do texto do botão como branca */
+    border: none; /* Remove a borda padrão do botão */
+}
+
+.btn-primary:hover {
+    background-color: #e60066; /* Altera a cor de fundo para um tom de rosa mais escuro quando o mouse passa sobre o botão */
+}
+
+/* Estilo para o botão secundário */
+.btn-secondary {
+    background-color: #ddd; /* Define o fundo do botão secundário como um cinza claro */
+    color: #333; /* Define a cor do texto do botão secundário como cinza escuro */
+    border: none; /* Remove a borda padrão do botão */
+}
+
+.btn-secondary:hover {
+    background-color: #bbb; /* Altera a cor de fundo para um tom de cinza mais escuro quando o mouse passa sobre o botão */
+}
+
+/* Efeitos de transição suave para os botões */
+button, a {
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Adiciona uma transição suave para mudanças de cor de fundo e transformação (como aumento de tamanho) */
+}
+
+button:hover, a:hover {
+    transform: scale(1.05); /* Aumenta o tamanho do botão em 5% quando o mouse passa sobre ele */
+}
