@@ -36,10 +36,10 @@ require_once "../controle/verificaLogado.php";
  
       <h5 class="feature-1">Literatura</h5>
       <h5 class="feature-2">Romance</h5>
-      <h5 class="feature-3">Tough</h5>
-      <h5 class="feature-4">Modern</h5>
+      <h5 class="feature-3">Fantasia</h5>
+
       <footer class="footer">
-        <p>Copyright © 2024 Web Design Mastery. All rights reserved.</p>
+        <p>Copyright © 2024 Vitrine sem Fim. Todos os direitos reservados.</p>
         <div class="footer__links">
           <li><a href="#">Facebook</a></li>
           <li><a href="#">Instagram</a></li>
