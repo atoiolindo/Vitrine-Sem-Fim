@@ -56,6 +56,9 @@ if (isset($_GET['valor'])) {
                 $isbn = $linha['isbn'];
                 $estado = $linha['estado'];
 
+             
+        
+
 
                 echo "<tr>";
                 echo "<td>$id</td>";
