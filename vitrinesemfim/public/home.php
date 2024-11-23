@@ -15,7 +15,7 @@ require_once "../controle/verificaLogado.php";
     <?php require_once 'menu.php';  // Inclui o menu lateral da página ?>
 
     <div class="container"> <!-- Início da div com a classe 'container', que contém o conteúdo principal -->
-      <nav> <!-- Início da área de navegação -->
+      <nav class="nav"> <!-- Início da área de navegação -->
         <ul class="nav__links nav__left"> <!-- Lista de links à esquerda -->
           <li><a href="#" class="logo">Vitrine sem Fim</a></li> <!-- Link para o nome do site, não direciona para nenhum lugar -->
         </ul>

@@ -1,70 +1,71 @@
+/* Estilo do corpo da página */
 body {
-    background-image: url('../assets/wallpaper.jpg');
-    background-size: cover;
-    max-width: 100%;
+    background-image: url('../assets/wallpaper.jpg'); /* Imagem de fundo do corpo da página */
+    background-size: cover; /* Ajusta a imagem para cobrir toda a área do corpo */
+    max-width: 100%; /* Limita a largura máxima para 100% */
 }
 
+/* Classe para o elemento principal do conteúdo */
 .corpo {
-    margin-top: 15%;
+    margin-top: 15%; /* Espaçamento superior para centralizar verticalmente */
 }
 
+/* Estilo para o elemento fieldset */
 fieldset {
-    border: 1px solid #f6a9e9;
-    /* Cor da borda */
-    border-radius: 5px;
-    /* Bordas arredondadas */
-    padding: 15px;
-    margin-inline: 5%;
+    border: 1px solid #f6a9e9; /* Define uma borda com cor rosa claro */
+    border-radius: 5px; /* Bordas arredondadas com raio de 5px */
+    padding: 15px; /* Espaçamento interno do conteúdo */
+    margin-inline: 5%; /* Espaçamento nas margens laterais */
 }
 
+/* Estilo para o elemento legend */
 legend {
-    font-size: 1.25rem;
-    /* Tamanho da fonte do título */
-    font-weight: bold;
-    /* Fonte em negrito */
-    color: #f6a9e9;
-    /* Cor do texto do título */
+    font-size: 1.25rem; /* Tamanho da fonte do título */
+    font-weight: bold; /* Aplica negrito ao texto */
+    color: #f6a9e9; /* Define a cor do texto em rosa claro */
 }
 
+/* Estilo para links */
 a {
-    margin: 5px; /*botão*/
+    margin: 5px; /* Adiciona margem ao redor dos links */
 }
 
+/* Centraliza títulos de nível 2 (h2) */
 h2 {
-    text-align: center; /*titulos*/
-    
-
-
+    text-align: center; /* Alinha o texto ao centro */
 }
 
+/* Centraliza títulos de nível 3 (h3) */
 h3 {
-    text-align: center; /*titulos*/
+    text-align: center; /* Alinha o texto ao centro */
 }
 
+/* Centraliza todos os elementos div */
 div {
-    text-align: center; /*titulos*/
-   
+    text-align: center; /* Alinha o texto ao centro */
 }
 
+/* Centraliza títulos de nível 4 (h4) */
 h4 {
-    text-align: center; /*titulos*/
-   
-
+    text-align: center; /* Alinha o texto ao centro */
 }
+
+/* Estilo específico para o elemento com ID 'borda_cima' */
 #borda_cima {
-    margin-top: 15%;
-    margin-left: 15%; /*index*/
-    
+    margin-top: 15%; /* Adiciona espaçamento superior */
+    margin-left: 15%; /* Adiciona espaçamento à esquerda */
 }
 
+/* Estilo para a classe 'listar' */
 .listar {
-    background-image: url('../assets/wallpaperinfinito.jpg');
-    background-size: cover;
-    max-width: 100%;
-}
-.cadas {
-    background-image: url('../assets/wallpapercadastro.jpg');
-    background-size: cover;
-    max-width: 100%;
+    background-image: url('../assets/wallpaperinfinito.jpg'); /* Imagem de fundo específica */
+    background-size: cover; /* Ajusta a imagem para cobrir o elemento */
+    max-width: 100%; /* Limita a largura máxima a 100% */
 }
 
+/* Estilo para a classe 'cadas' */
+.cadas {
+    background-image: url('../assets/wallpapercadastro.jpg'); /* Imagem de fundo específica */
+    background-size: cover; /* Ajusta a imagem para cobrir o elemento */
+    max-width: 100%; /* Limita a largura máxima a 100% */
+}

@@ -1,90 +1,106 @@
+/* Importando a fonte "Outfit" do Google Fonts com peso 300 */
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap');
 
+/* Botão de expandir com alinhamento e margens personalizadas */
 .btnexpandir {
-    text-align: left;
-    margin-left: 1%;
-    margin-top: 2%;
-    font-size: larger;
+    text-align: left;        /* Alinha o conteúdo à esquerda */
+    margin-left: 1%;         /* Margem esquerda de 1% */
+    margin-top: 2%;          /* Margem superior de 2% */
+    font-size: larger;       /* Aumenta o tamanho da fonte */
 }
 
+/* Menu com alinhamento à esquerda */
 #menu {
-    text-align: left;
+    text-align: left;        /* Alinha o texto do menu à esquerda */
 }
 
+/* Estilo do menu lateral */
 nav.menulateral {
-    width: 50px; /* Tamanho inicial do menu */
-    height: 100%;
-    background-color: #202020;
-    padding: 40px 0 40px 1%;
-    box-shadow: 3px 0 0 #FF0077;
-    position: fixed;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    transition: width 0.3s ease; /* Transição suave para a expansão */
+    width: 50px;             /* Largura inicial do menu lateral */
+    height: 100%;            /* Altura total da tela */
+    background-color: #202020; /* Fundo escuro */
+    padding: 40px 0 40px 1%; /* Espaçamento interno (superior, inferior, esquerdo) */
+    box-shadow: 3px 0 0 #FF0077; /* Sombra com borda colorida rosa */
+    position: fixed;         /* Menu fixado na lateral esquerda */
+    top: 0;                  /* Começa no topo */
+    left: 0;                 /* Alinhado à esquerda */
+    overflow: hidden;        /* Oculta conteúdo que ultrapasse a largura inicial */
+    transition: width 0.3s ease; /* Transição suave ao expandir o menu */
 }
 
+/* Expansão do menu ao passar o mouse */
 nav.menulateral:hover {
-    width: 300px; /* Largura do menu quando o mouse passa por cima */
+    width: 300px;            /* Aumenta a largura do menu para 300px */
 }
 
+/* Estilo do botão de expandir dentro do menu */
 .btnexpandir {
-    width: 100%;
-    padding-left: 10px;
+    width: 100%;             /* O botão ocupa toda a largura do menu */
+    padding-left: 10px;      /* Espaçamento interno à esquerda */
 }
 
-/* Diminuindo o tamanho do ícone quando o menu estiver fechado */
+/* Ícone dentro do botão de expandir (menu fechado) */
 .btnexpandir > i {
-    color: #fff;
-    font-size: 18px; /* Diminuindo o tamanho do ícone */
-    cursor: pointer;
-    transition: font-size 0.3s ease; /* Suaviza a transição do tamanho do ícone */
+    color: #fff;             /* Cor branca */
+    font-size: 18px;         /* Tamanho do ícone pequeno */
+    cursor: pointer;         /* Mostra o cursor ao passar o mouse */
+    transition: font-size 0.3s ease; /* Transição suave ao alterar o tamanho */
 }
 
-/* Escondendo o ícone quando o menu estiver fechado */
+/* Estado inicial do menu lateral */
 nav.menulateral {
-    width: 50px; /* Tamanho inicial do menu */
+    width: 50px;             /* Largura inicial */
 }
 
+/* Ícone ao expandir o menu */
 nav.menulateral:hover .btnexpandir > i {
-    font-size: 24px; /* Tamanho maior do ícone quando o menu está expandido */
+    font-size: 24px;         /* Tamanho maior do ícone quando expandido */
 }
 
-.ulmenu {
-    height: 100%;
-    list-style-type: none;
-}
 
+
+/* Lista de itens no menu */
+ul li {
+    height: 100%;            /* Altura total do menu */
+    list-style-type: none;   /* Remove marcadores da lista */
+}
+/* Itens do menu com transição */
 ul li.itemmenu {
-    transition: .2s;
+    transition: 0.2s;        /* Suaviza mudanças visuais */
 }
 
+/* Estilo do item ativo no menu */
 ul li.ativo {
-    background-color: #FF0077;
+    background-color: #FF0077; /* Fundo rosa para o item ativo */
 }
 
+/* Alteração de fundo ao passar o mouse nos itens do menu */
 ul li.itemmenu:hover {
-    background: #FF0077;
+    background: #FF0077;     /* Fundo rosa ao passar o mouse */
 }
 
+/* Links dentro dos itens do menu */
 ul li.itemmenu a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 20px;
-    padding: 20px 4%;
-    display: flex;
-    margin-bottom: 20px;
-    line-height: 40px;
+    color: #fff;             /* Cor branca */
+    text-decoration: none;   /* Remove sublinhado dos links */
+    font-size: 20px;         /* Tamanho da fonte */
+    padding: 20px 4%;        /* Espaçamento interno (vertical e horizontal) */
+    display: flex;           /* Exibição flexível para alinhamento interno */
+    margin-bottom: 20px;     /* Espaçamento inferior entre itens */
+    line-height: 40px;       /* Altura da linha para centralizar verticalmente */
 }
 
+/* Texto dos links deslocado para a direita */
 ul li.itemmenu a .txtlink {
-    margin-left: 40px;
+    margin-left: 40px;       /* Margem esquerda para espaçar o texto */
 }
 
+/* Ícones dentro dos itens do menu */
 ul li.itemmenu a .icon > i {
-    font-size: 30px;
+    font-size: 30px;         /* Tamanho maior dos ícones */
 }
 
+/* Margem superior adicional para o item com id "casa" */
 #casa {
-    margin-top: 30px;
+    margin-top: 30px;        /* Espaçamento superior de 30px */
 }

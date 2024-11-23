@@ -1,289 +1,330 @@
+/* Importando a fonte "Noto Sans JP" com pesos entre 100 e 900 */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
 
+/* Definição de variáveis CSS para reutilização de estilos */
 :root {
-  --primary-color: #8263a3;
-  --text-dark: #232637;
-  --white: #ffffff;
-  --max-width: 1200px;
+  --primary-color: #8263a3; /* Cor primária */
+  --text-dark: #232637;    /* Cor do texto escuro */
+  --white: #ffffff;        /* Cor branca */
+  --max-width: 1200px;     /* Largura máxima do layout */
 }
 
+/* Reset de padding, margin e definição de box-sizing */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+/* Estilo base para botões */
 .btn {
-  position: absolute;
-  padding: 1rem 2rem;
-  outline: none;
-  border: none;
-  font-weight: 600;
-  cursor: pointer;
+  position: absolute;          /* Posição absoluta */
+  padding: 1rem 2rem;          /* Espaçamento interno */
+  outline: none;               /* Remoção da borda de foco */
+  border: none;                /* Sem borda */
+  font-weight: 600;            /* Peso da fonte */
+  cursor: pointer;             /* Alteração do cursor ao passar */
 }
 
+/* Estilo base para links */
 a {
-  text-decoration: none;
-  transition: 0.3s;
+  text-decoration: none;       /* Sem sublinhado */
+  transition: 0.3s;            /* Transição suave */
 }
 
+/* Estilo para o corpo da página */
 body {
-  font-family: "Noto Sans JP", sans-serif;
-  background-color: #dbdce0;
+  font-family: "Noto Sans JP", sans-serif; /* Fonte padrão */
+  background-color: #dbdce0;               /* Cor de fundo */
 }
 
+/* Efeito de fundo com animação em metade da tela */
 body::after {
-  position: fixed;
-  content: "";
-  height: 100%;
-  width: 0;
-  top: 0;
-  right: 0;
-  background-color: var(--text-dark);
-  z-index: -1;
-
-  animation: body-bg 1s ease-in-out forwards;
+  position: fixed;                       /* Posição fixa */
+  content: "";                           /* Sem conteúdo */
+  height: 100%;                          /* Altura total */
+  width: 0;                              /* Largura inicial */
+  top: 0;                                /* Alinhamento ao topo */
+  right: 0;                              /* Alinhamento à direita */
+  background-color: var(--text-dark);    /* Cor de fundo */
+  z-index: -1;                           /* Camada abaixo do conteúdo */
+  animation: body-bg 1s ease-in-out forwards; /* Animação ao carregar */
 }
 
+/* Animação para o fundo do body */
 @keyframes body-bg {
   0% {
-    width: 0vw;
+    width: 0vw; /* Largura inicial */
   }
   100% {
-    width: 50vw;
+    width: 50vw; /* Largura final (50% da tela) */
   }
 }
 
+/* Texto grande fixo no fundo da página */
 body::before {
-  position: fixed;
-  content: "0";
-  top: 0;
-  left: 0;
-  transform: translate(-50%, -50%);
-  font-size: 70rem;
-  font-weight: 200;
-  color: var(--white);
-  z-index: -1;
-  opacity: 0.5;
+  position: fixed;             /* Posição fixa */
+  content: "0";                /* Texto exibido */
+  top: 0;                      /* Alinhamento ao topo */
+  left: 0;                     /* Alinhamento à esquerda */
+  transform: translate(-50%, -50%); /* Centraliza o texto */
+  font-size: 70rem;            /* Tamanho da fonte */
+  font-weight: 200;            /* Peso leve */
+  color: var(--white);         /* Cor branca */
+  z-index: -1;                 /* Camada abaixo do conteúdo */
+  opacity: 0.5;                /* Opacidade reduzida */
 }
 
+/* Container principal */
 .container {
-  position: relative;
-  isolation: isolate;
-  min-height: 100vh;
-  max-width: var(--max-width);
-  margin-inline: auto;
-  overflow: hidden;
+  position: relative;          /* Posição relativa */
+  isolation: isolate;          /* Isola o contexto de empilhamento */
+  min-height: 100vh;           /* Altura mínima da viewport */
+  max-width: var(--max-width); /* Largura máxima */
+  margin-inline: auto;         /* Centralização horizontal */
+  overflow: hidden;            /* Oculta transbordamentos */
 }
 
-nav {
-  padding-block: 2rem 0;
-  padding-inline: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+/* Cabeçalho com navegação */
+.nav {
+  padding-block: 2rem 0;       /* Espaçamento vertical */
+  padding-inline: 1rem;        /* Espaçamento horizontal */
+  display: flex;               /* Exibição flexível */
+  align-items: center;         /* Alinhamento vertical */
+  justify-content: space-between; /* Distribuição horizontal */
+  gap: 1rem;                   /* Espaçamento entre elementos */
 }
 
+/* Estilo dos links da navegação */
 .nav__links {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 2rem;
+  list-style: none;            /* Remove marcadores da lista */
+  display: flex;               /* Exibição flexível */
+  align-items: center;         /* Alinhamento vertical */
+  gap: 2rem;                   /* Espaçamento entre links */
 }
 
+/* Links padrão da navegação */
 .nav__links a {
-  font-weight: 500;
+  font-weight: 500;            /* Peso médio da fonte */
 }
 
+/* Logo da navegação */
 .nav__links .logo {
-  font-size: 1.2rem;
-  font-weight: 800;
+  font-size: 1.2rem;           /* Tamanho da fonte */
+  font-weight: 800;            /* Peso da fonte */
 }
 
+/* Estilo para links à esquerda da navegação */
 .nav__left a {
-  color: var(--text-dark);
+  color: var(--text-dark);     /* Cor escura */
 }
 
+/* Estilo para links à direita da navegação */
 .nav__right a {
-  color: var(--white);
+  color: var(--white);         /* Cor branca */
 }
 
+/* Mudança de cor ao passar o mouse */
 .nav__links a:hover {
-  color: var(--primary-color);
+  color: var(--primary-color); /* Cor primária */
 }
 
+/* Texto decorativo no centro da página */
 .letter-s {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 40rem;
-  line-height: 40rem;
-  font-weight: 900;
-  color: var(--primary-color);
+  position: absolute;          /* Posição absoluta */
+  top: 50%;                    /* Centralizado verticalmente */
+  left: 50%;                   /* Centralizado horizontalmente */
+  transform: translate(-50%, -50%); /* Centralização exata */
+  font-size: 40rem;            /* Tamanho grande da fonte */
+  line-height: 40rem;          /* Altura de linha */
+  font-weight: 900;            /* Peso extra negrito */
+  color: var(--primary-color); /* Cor primária */
 }
 
+/* Imagem central no container */
 .container img {
-  position: absolute;
-  width: 100%;
-  max-width: 200px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  filter: drop-shadow(0 0 50px rgba(0, 0, 0, 0.8));
+  position: absolute;          /* Posição absoluta */
+  width: 100%;                 /* Largura total */
+  max-width: 200px;            /* Largura máxima */
+  top: 50%;                    /* Centralizado verticalmente */
+  left: 50%;                   /* Centralizado horizontalmente */
+  transform: translate(-50%, -50%); /* Centralização exata */
+  filter: drop-shadow(0 0 50px rgba(0, 0, 0, 0.8)); /* Sombra */
 }
 
+/* Texto centralizado dentro do container */
 .container h4 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  font-size: 5rem;
-  color: var(--white);
-  letter-spacing: 25px;
+  position: absolute;          /* Posição absoluta */
+  top: 50%;                    /* Centralizado verticalmente */
+  left: 50%;                   /* Centralizado horizontalmente */
+  font-size: 5rem;             /* Tamanho grande da fonte */
+  color: var(--white);         /* Cor branca */
+  letter-spacing: 25px;        /* Espaçamento entre letras */
 }
 
+/* Texto alinhado à esquerda */
 .text__left {
-  transform: translate(calc(-50% - 250px), -50%);
+  transform: translate(calc(-50% - 250px), -50%); /* Desloca o texto à esquerda */
 }
 
+/* Texto alinhado à direita */
 .text__right {
-  transform: translate(calc(-50% + 250px), -50%);
+  transform: translate(calc(-50% + 250px), -50%); /* Desloca o texto à direita */
 }
 
+/* Botão de explorar centralizado no container */
 .container .explore {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, calc(-50% + 225px));
-  color: var(--text-dark);
-  background-color: var(--white);
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
+  top: 50%;                                    /* Centralizado verticalmente */
+  left: 50%;                                   /* Centralizado horizontalmente */
+  transform: translate(-50%, calc(-50% + 225px)); /* Deslocado para baixo */
+  color: var(--text-dark);                     /* Cor do texto escuro */
+  background-color: var(--white);              /* Fundo branco */
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);     /* Sombra ao redor */
 }
 
+/* Botão rotacionado para "Print" na lateral direita */
 .container .print {
-  top: 50%;
-  right: 0;
-  transform: translate(0, -50%) rotate(90deg);
-  padding: calc(1rem - 4px) calc(2rem - 4px);
-  color: var(--white);
-  background-color: transparent;
-  border: 1px solid var(--white);
+  top: 50%;                                    /* Centralizado verticalmente */
+  right: 0;                                    /* Alinhado à direita */
+  transform: translate(0, -50%) rotate(90deg); /* Rotação de 90 graus */
+  padding: calc(1rem - 4px) calc(2rem - 4px);  /* Espaçamento interno ajustado */
+  color: var(--white);                         /* Texto branco */
+  background-color: transparent;              /* Fundo transparente */
+  border: 1px solid var(--white);             /* Borda branca */
 }
 
+/* Botão rotacionado para "Catalog" na lateral esquerda */
 .container .catalog {
-  top: 25%;
-  left: 0;
-  transform: translate(0, -50%) rotate(-90deg);
-  padding: calc(1rem - 4px) calc(2rem - 4px);
-  color: var(--text-dark);
-  background-color: transparent;
-  border: 1px solid var(--text-dark);
+  top: 25%;                                    /* Posicionado no topo */
+  left: 0;                                     /* Alinhado à esquerda */
+  transform: translate(0, -50%) rotate(-90deg); /* Rotação de -90 graus */
+  padding: calc(1rem - 4px) calc(2rem - 4px);  /* Espaçamento interno ajustado */
+  color: var(--text-dark);                     /* Texto escuro */
+  background-color: transparent;              /* Fundo transparente */
+  border: 1px solid var(--text-dark);         /* Borda escura */
 }
 
+/* Estilo para subtítulos centralizados */
 .container h5 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  font-size: 1.2rem;
-  font-weight: 500;
+  position: absolute;                          /* Posição absoluta */
+  top: 50%;                                    /* Centralizado verticalmente */
+  left: 50%;                                   /* Centralizado horizontalmente */
+  font-size: 1.2rem;                           /* Tamanho da fonte */
+  font-weight: 500;                            /* Peso médio */
 }
 
+/* Linha decorativa adicionada abaixo dos subtítulos */
 .container h5::after {
-  position: absolute;
-  content: "";
-  height: 1px;
-  width: 100px;
-  top: 50%;
+  position: absolute;                          /* Posição absoluta */
+  content: "";                                 /* Sem conteúdo visível */
+  height: 1px;                                 /* Altura da linha */
+  width: 100px;                                /* Largura da linha */
+  top: 50%;                                    /* Alinhado ao meio */
 }
 
+/* Primeira funcionalidade destacada */
 .feature-1 {
-  color: var(--text-dark);
-  transform: translate(calc(-50% - 300px), calc(-50% - 200px));
+  color: var(--text-dark);                     /* Texto escuro */
+  transform: translate(calc(-50% - 300px), calc(-50% - 200px)); /* Posicionado no topo esquerdo */
 }
 
+/* Segunda funcionalidade destacada */
 .feature-2 {
-  color: var(--white);
-  transform: translate(calc(-50% + 300px), calc(-50% - 200px));
+  color: var(--white);                         /* Texto branco */
+  transform: translate(calc(-50% + 300px), calc(-50% - 200px)); /* Posicionado no topo direito */
 }
 
+/* Terceira funcionalidade destacada */
 .feature-3 {
-  color: var(--text-dark);
-  transform: translate(calc(-50% - 300px), calc(-50% + 200px));
+  color: var(--text-dark);                     /* Texto escuro */
+  transform: translate(calc(-50% - 300px), calc(-50% + 200px)); /* Posicionado na base esquerda */
 }
 
+/* Quarta funcionalidade destacada */
 .feature-4 {
-  color: var(--white);
-  transform: translate(calc(-50% + 300px), calc(-50% + 200px));
+  color: var(--white);                         /* Texto branco */
+  transform: translate(calc(-50% + 300px), calc(-50% + 200px)); /* Posicionado na base direita */
 }
 
+/* Linha decorativa à direita para funcionalidades 1 e 3 */
 .feature-1::after,
 .feature-3::after {
-  right: 0;
-  transform: translate(calc(100% + 40px), -50%);
-  background-color: var(--text-dark);
+  right: 0;                                    /* Alinhado à direita */
+  transform: translate(calc(100% + 40px), -50%); /* Deslocado para fora do texto */
+  background-color: var(--text-dark);         /* Cor escura */
 }
 
+/* Linha decorativa à esquerda para funcionalidades 2 e 4 */
 .feature-2::after,
 .feature-4::after {
-  left: 0;
-  transform: translate(calc(-100% - 40px), -50%);
-  background-color: var(--white);
+  left: 0;                                     /* Alinhado à esquerda */
+  transform: translate(calc(-100% - 40px), -50%); /* Deslocado para fora do texto */
+  background-color: var(--white);             /* Cor branca */
 }
 
+/* Rodapé posicionado na parte inferior */
 .footer {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  padding-inline: 1rem;
-  bottom: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+  position: absolute;                          /* Posição absoluta */
+  left: 50%;                                   /* Centralizado horizontalmente */
+  transform: translateX(-50%);                 /* Ajuste de centralização */
+  width: 100%;                                 /* Largura total */
+  padding-inline: 1rem;                        /* Espaçamento lateral */
+  bottom: 2rem;                                /* Distância do rodapé */
+  display: flex;                               /* Exibição flexível */
+  align-items: center;                         /* Alinhamento vertical */
+  justify-content: space-between;              /* Distribuição horizontal */
+  gap: 1rem;                                   /* Espaçamento entre elementos */
 }
 
+/* Texto do rodapé */
 .footer p {
-  font-size: 0.9rem;
-  color: var(--text-dark);
+  font-size: 0.9rem;                           /* Tamanho da fonte */
+  color: var(--text-dark);                     /* Cor do texto escuro */
 }
 
+/* Lista de links no rodapé */
 .footer__links {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
+  list-style: none;                            /* Remove marcadores */
+  display: flex;                               /* Exibição flexível */
+  align-items: center;                         /* Alinhamento vertical */
+  justify-content: space-between;              /* Espaçamento uniforme */
+  gap: 2rem;                                   /* Espaçamento entre links */
 }
 
+/* Links individuais com efeito de animação */
 .footer__links li {
-  opacity: 0;
-  animation: fade__in 0.3s ease-in-out forwards;
+  opacity: 0;                                  /* Inicialmente invisível */
+  animation: fade__in 0.3s ease-in-out forwards; /* Animação para aparecer */
 }
 
+/* Diferentes atrasos para cada link do rodapé */
 .footer__links li:nth-child(1) {
-  animation-delay: 6s;
+  animation-delay: 6s;                         /* Atraso de 6 segundos */
 }
 .footer__links li:nth-child(2) {
-  animation-delay: 6.5s;
+  animation-delay: 6.5s;                       /* Atraso de 6,5 segundos */
 }
 .footer__links li:nth-child(3) {
-  animation-delay: 7s;
+  animation-delay: 7s;                         /* Atraso de 7 segundos */
 }
 
-
-
+/* Estilo padrão dos links no rodapé */
 .footer__links a {
-  color: var(--white);
+  color: var(--white);                         /* Cor branca */
 }
 
+/* Mudança de cor ao passar o mouse nos links do rodapé */
 .footer__links a:hover {
-  color: var(--primary-color);
+  color: var(--primary-color);                 /* Cor primária */
 }
 
+/* Configurações de media queries para responsividade */
 @media (width > 540px) {
+  /* Adicione estilos específicos para telas maiores que 540px */
 }
 @media (width > 768px) {
+  /* Adicione estilos específicos para telas maiores que 768px */
 }
 @media (width > 1024px) {
+  /* Adicione estilos específicos para telas maiores que 1024px */
 }
