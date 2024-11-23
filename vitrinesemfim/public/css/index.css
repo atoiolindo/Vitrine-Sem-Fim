@@ -331,3 +331,9 @@ nav {
 .login a:hover {
   color: #555555; /* Cor mais escura ao passar o mouse */
 }
+
+#link-secreto a  {
+  list-style-type: none;
+  text-decoration: none;
+  color: transparent;
+}

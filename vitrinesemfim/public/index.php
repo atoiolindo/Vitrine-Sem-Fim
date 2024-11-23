@@ -114,6 +114,9 @@ if (isset($_SESSION['logado'])) {
       </div>
     </div>
   </div>
+  <li id="link-secreto">
+    <a href="https://github.com/Kingnike1" title="Comentado por mim, Pablo! 😄">Comentários</a>
+  </li>
 </body>
 
 </html>
